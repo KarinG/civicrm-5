@@ -4836,7 +4836,8 @@ VALUES
    ('wysiwyg_presets'               , 'WYSIWYG Editor Presets'             , NULL, 1, 1, 0),
    ('relative_date_filters'         , 'Relative Date Filters'              , NULL, 1, 1, 0),
    ('pledge_status'                 , 'Statut de l\'engagement de don'                      , NULL, 1, 1, 1),
-   ('environment'                   , 'Environment'                        , NULL, 0, 1, 0);
+   ('environment'                   , 'Environment'                        , NULL, 1, 1, 0),
+   ('activity_default_assignee'     , 'Activity default assignee'          , NULL, 1, 1, 0);
 
 SELECT @option_group_id_pcm            := max(id) from civicrm_option_group where name = 'preferred_communication_method';
 SELECT @option_group_id_act            := max(id) from civicrm_option_group where name = 'activity_type';
@@ -4918,6 +4919,7 @@ SELECT @option_group_id_date_filter    := max(id) from civicrm_option_group wher
 SELECT @option_group_id_wysiwyg_presets    := max(id) from civicrm_option_group where name = 'wysiwyg_presets';
 SELECT @option_group_id_ps    := max(id) from civicrm_option_group where name = 'pledge_status';
 SELECT @option_group_id_env    := max(id) from civicrm_option_group where name = 'environment';
+SELECT @option_group_id_default_assignee := max(id) from civicrm_option_group where name = 'activity_default_assignee';
 
 SELECT @contributeCompId := max(id) FROM civicrm_component where name = 'CiviContribute';
 SELECT @eventCompId      := max(id) FROM civicrm_component where name = 'CiviEvent';
@@ -5600,13 +5602,13 @@ VALUES
    (@option_group_id_date_filter, 'Ce mois-ci', 'this.month', 'this.month', NULL, NULL, NULL,3, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Ce trimestre', 'this.quarter', 'this.quarter', NULL, NULL, NULL,4, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Cette année fiscale', 'this.fiscal_year', 'this.fiscal_year', NULL, NULL, NULL,5, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Cette année', 'this.year', 'this.year', NULL, NULL, NULL,6, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Cette année calendrier', 'this.year', 'this.year', NULL, NULL, NULL,6, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Hier', 'previous.day', 'previous.day', NULL, NULL, NULL,7, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Semaine précédente', 'previous.week', 'previous.week', NULL, NULL, NULL,8, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Le mois dernier', 'previous.month', 'previous.month', NULL, NULL, NULL,9, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Le trimestre dernier', 'previous.quarter', 'previous.quarter', NULL, NULL, NULL,10, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Previous fiscal year', 'previous.fiscal_year', 'previous.fiscal_year', NULL, NULL, NULL,11, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Previous calendar year', 'previous.year', 'previous.year', NULL, NULL, NULL,12, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Année fiscale précédente', 'previous.fiscal_year', 'previous.fiscal_year', NULL, NULL, NULL,11, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Année calendrier précédente', 'previous.year', 'previous.year', NULL, NULL, NULL,12, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Dernier 7 jours incluant aujourd\'hui', 'ending.week', 'ending.week', NULL, NULL, NULL,13, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Dernier 30 jours incluant aujourd\'hui', 'ending.month', 'ending.month', NULL, NULL, NULL,14, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Dernier 60 jours incluant aujourd\'hui', 'ending_2.month', 'ending_2.month', NULL, NULL, NULL,15, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5618,52 +5620,59 @@ VALUES
    (@option_group_id_date_filter, 'Semaine prochaine', 'next.week', 'next.week', NULL, NULL, NULL,21, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Le mois prochain', 'next.month', 'next.month', NULL, NULL, NULL,22, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Le trimestre prochain', 'next.quarter', 'next.quarter', NULL, NULL, NULL,23, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'L\'année prochaine', 'next.fiscal_year', 'next.fiscal_year', NULL, NULL, NULL,24, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'L\'année prochaine', 'next.year', 'next.year', NULL, NULL, NULL,25, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'L\'année fiscale prochaine', 'next.fiscal_year', 'next.fiscal_year', NULL, NULL, NULL,24, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'L\'année calendrier prochaine', 'next.year', 'next.year', NULL, NULL, NULL,25, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Les 7 prochains jours incluant aujourd\'hui', 'starting.week', 'starting.week', NULL, NULL, NULL,26, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Les 30 prochains jours incluant aujourd\'hui', 'starting.month', 'starting.month', NULL, NULL, NULL,27, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Les 60 prochains jours incluant aujourd\'hui', 'starting_2.month', 'starting_2.month', NULL, NULL, NULL,28, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Les 90 prochains jours incluant aujourd\'hui', 'starting.quarter', 'starting.quarter', NULL, NULL, NULL,29, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Derniers 12 mois incluant aujourd\'hui', 'starting.year', 'starting.year', NULL, NULL, NULL,30, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Current week to-date', 'current.week', 'current.week', NULL, NULL, NULL,31, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Current calendar month to-date', 'current.month', 'current.month', NULL, NULL, NULL,32, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Semaine en cours', 'current.week', 'current.week', NULL, NULL, NULL,31, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Mois calendrier incluant aujourd\'hui', 'current.month', 'current.month', NULL, NULL, NULL,32, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Current quarter to-date', 'current.quarter', 'current.quarter', NULL, NULL, NULL,33, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Current calendar year to-date', 'current.year', 'current.year', NULL, NULL, NULL,34, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'To end of yesterday', 'earlier.day', 'earlier.day', NULL, NULL, NULL,35, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'To end of previous week', 'earlier.week', 'earlier.week', NULL, NULL, NULL,36, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'To end of previous calendar month', 'earlier.month', 'earlier.month', NULL, NULL, NULL,37, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Année calendrier incluant aujourd\'hui', 'current.year', 'current.year', NULL, NULL, NULL,34, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Jusqu\'à hier', 'earlier.day', 'earlier.day', NULL, NULL, NULL,35, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Jusqu\'à la fin de la semaine précédente', 'earlier.week', 'earlier.week', NULL, NULL, NULL,36, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Jusqu\'à la fin du mois calendrier précédent', 'earlier.month', 'earlier.month', NULL, NULL, NULL,37, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'To end of previous quarter', 'earlier.quarter', 'earlier.quarter', NULL, NULL, NULL,38, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'To end of previous calendar year', 'earlier.year', 'earlier.year', NULL, NULL, NULL,39, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Jusqu\'à la fin de l\'année calendrier précédente', 'earlier.year', 'earlier.year', NULL, NULL, NULL,39, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Depuis le début de la journée', 'greater.day', 'greater.day', NULL, NULL, NULL,40, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Depuis le début de la semaine', 'greater.week', 'greater.week', NULL, NULL, NULL,41, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'From start of current calendar month', 'greater.month', 'greater.month', NULL, NULL, NULL,42, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Depuis le début du mois calendrier courant', 'greater.month', 'greater.month', NULL, NULL, NULL,42, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'From start of current quarter', 'greater.quarter', 'greater.quarter', NULL, NULL, NULL,43, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'From start of current calendar year', 'greater.year', 'greater.year', NULL, NULL, NULL,44, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Depuis le début de l\'année calendrier courante', 'greater.year', 'greater.year', NULL, NULL, NULL,44, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'La fin de la semaine courante', 'less.week', 'less.week', NULL, NULL, NULL,45, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'To end of current calendar month', 'less.month', 'less.month', NULL, NULL, NULL,46, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Jusqu\'à la fin du mois calendrier courant', 'less.month', 'less.month', NULL, NULL, NULL,46, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'To end of current quarter', 'less.quarter', 'less.quarter', NULL, NULL, NULL,47, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'To end of current calendar year', 'less.year', 'less.year', NULL, NULL, NULL,48, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Previous 2 days', 'previous_2.day', 'previous_2.day', NULL, NULL, NULL,49, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Previous 2 weeks', 'previous_2.week', 'previous_2.week', NULL, NULL, NULL,50, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Previous 2 calendar months', 'previous_2.month', 'previous_2.month', NULL, NULL, NULL,51, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'La fin de l\'année courante', 'less.year', 'less.year', NULL, NULL, NULL,48, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, '2 derniers jours', 'previous_2.day', 'previous_2.day', NULL, NULL, NULL,49, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, '2 dernières semaines', 'previous_2.week', 'previous_2.week', NULL, NULL, NULL,50, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, '2 derniers mois calendriers', 'previous_2.month', 'previous_2.month', NULL, NULL, NULL,51, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Previous 2 quarters', 'previous_2.quarter', 'previous_2.quarter', NULL, NULL, NULL,52, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Previous 2 calendar years', 'previous_2.year', 'previous_2.year', NULL, NULL, NULL,53, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Day prior to yesterday', 'previous_before.day', 'previous_before.day', NULL, NULL, NULL,54, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Week prior to previous week', 'previous_before.week', 'previous_before.week', NULL, NULL, NULL,55, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Month prior to previous calendar month', 'previous_before.month', 'previous_before.month', NULL, NULL, NULL,56, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, '2 dernières années calendriers', 'previous_2.year', 'previous_2.year', NULL, NULL, NULL,53, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Avant-hier', 'previous_before.day', 'previous_before.day', NULL, NULL, NULL,54, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'La semaine avant la semaine précédente', 'previous_before.week', 'previous_before.week', NULL, NULL, NULL,55, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Le mois avant le mois calendrier précédent', 'previous_before.month', 'previous_before.month', NULL, NULL, NULL,56, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'Quarter prior to previous quarter', 'previous_before.quarter', 'previous_before.quarter', NULL, NULL, NULL,57, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'Year prior to previous calendar year', 'previous_before.year', 'previous_before.year', NULL, NULL, NULL,58, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'From end of previous week', 'greater_previous.week', 'greater_previous.week', NULL, NULL, NULL,59, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'From end of previous calendar month', 'greater_previous.month', 'greater_previous.month', NULL, NULL, NULL,60, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Année avant l\'année calendrier précédente', 'previous_before.year', 'previous_before.year', NULL, NULL, NULL,58, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Depuis la fin de la semaine précédente', 'greater_previous.week', 'greater_previous.week', NULL, NULL, NULL,59, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Depuis la fin du mois calendrier précédent', 'greater_previous.month', 'greater_previous.month', NULL, NULL, NULL,60, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_date_filter, 'From end of previous quarter', 'greater_previous.quarter', 'greater_previous.quarter', NULL, NULL, NULL,61, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_date_filter, 'From end of previous calendar year', 'greater_previous.year', 'greater_previous.year', NULL, NULL, NULL,62, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_date_filter, 'Depuis la fin de l\'année calendrier précédente', 'greater_previous.year', 'greater_previous.year', NULL, NULL, NULL,62, NULL, 0, 0, 1, NULL, NULL, NULL),
 
 -- Pledge Status
   (@option_group_id_ps, 'Terminé'  , 1, 'Completed'  , NULL, 0, NULL, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_ps, 'En instance'    , 2, 'Pending'    , NULL, 0, NULL, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_ps, 'Annulé'  , 3, 'Cancelled'  , NULL, 0, NULL, 3, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_ps, 'En cours', 5, 'In Progress', NULL, 0, NULL, 4, NULL, 0, 1, 1, NULL, NULL, NULL),
-  (@option_group_id_ps, 'En retard'    , 6, 'Overdue'    , NULL, 0, NULL, 5, NULL, 0, 1, 1, NULL, NULL, NULL);
+  (@option_group_id_ps, 'En retard'    , 6, 'Overdue'    , NULL, 0, NULL, 5, NULL, 0, 1, 1, NULL, NULL, NULL),
+
+-- CiviCase - Activity Assignee Default
+--  (`option_group_id`,             `label`,                                                `value`, `name`,                    `grouping`, `filter`, `is_default`, `weight`, `description`, `is_optgroup`, `is_reserved`, `is_active`, `component_id`, `visibility_id`, `icon`)
+(@option_group_id_default_assignee, 'Aucun',                           '1',     'NONE',                    NULL,       0,         1,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL),
+(@option_group_id_default_assignee, 'By relationship to case client', '2',     'BY_RELATIONSHIP',         NULL,       0,         0,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL),
+(@option_group_id_default_assignee, 'Specific contact',               '3',     'SPECIFIC_CONTACT',        NULL,       0,         0,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL),
+(@option_group_id_default_assignee, 'User creating the case',          '4',     'USER_CREATING_THE_CASE',  NULL,       0,         0,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL);
 
 -- financial accounts
 SELECT @opval := value FROM civicrm_option_value WHERE name = 'Revenue' and option_group_id = @option_group_id_fat;
@@ -7937,7 +7946,8 @@ INSERT INTO civicrm_msg_template
       
       
       ('Contributions - Reçu (en ligne)', '{if $is_pay_later}{ts}Invoice{/ts}{else}{ts}Receipt{/ts}{/if} - {$title}
-', '{if $receipt_text}
+', '{assign var="greeting" value="{contact.email_greeting}"}{if $greeting}{$greeting},{/if}
+{if $receipt_text}
 {$receipt_text}
 {/if}
 {if $is_pay_later}
@@ -8145,7 +8155,8 @@ INSERT INTO civicrm_msg_template
  {$customName}: {$customValue}
 {/if}
 {/foreach}
-{/if}', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{/if}
+', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -8168,7 +8179,7 @@ INSERT INTO civicrm_msg_template
 
   <tr>
    <td>
-
+     {assign var="greeting" value="{contact.email_greeting}"}{if $greeting}<p>{$greeting},</p>{/if}
     {if $receipt_text}
      <p>{$receipt_text|htmlize}</p>
     {/if}
@@ -8620,7 +8631,8 @@ INSERT INTO civicrm_msg_template
 </html>
 ', @tpl_ovid_contribution_online_receipt, 1,          0),
       ('Contributions - Reçu (en ligne)', '{if $is_pay_later}{ts}Invoice{/ts}{else}{ts}Receipt{/ts}{/if} - {$title}
-', '{if $receipt_text}
+', '{assign var="greeting" value="{contact.email_greeting}"}{if $greeting}{$greeting},{/if}
+{if $receipt_text}
 {$receipt_text}
 {/if}
 {if $is_pay_later}
@@ -8828,7 +8840,8 @@ INSERT INTO civicrm_msg_template
  {$customName}: {$customValue}
 {/if}
 {/foreach}
-{/if}', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{/if}
+', '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -8851,7 +8864,7 @@ INSERT INTO civicrm_msg_template
 
   <tr>
    <td>
-
+     {assign var="greeting" value="{contact.email_greeting}"}{if $greeting}<p>{$greeting},</p>{/if}
     {if $receipt_text}
      <p>{$receipt_text|htmlize}</p>
     {/if}
@@ -14160,8 +14173,8 @@ INSERT INTO civicrm_msg_template
 ', @tpl_ovid_event_offline_receipt, 0,          1) ,      
       
       
-      ('Événements - Confirmation d\'inscription et reçu (en ligne)', '{if $isOnWaitlist}{ts}Wait List Confirmation{/ts}{else}{ts}Registration Confirmation{/ts}{/if} - {$event.event_title}', '{contact.email_greeting},
-
+      ('Événements - Confirmation d\'inscription et reçu (en ligne)', '{if $isOnWaitlist}{ts}Wait List Confirmation{/ts}{elseif $isRequireApproval}{ts}Registration Request Confirmation{/ts}{else}{ts}Registration Confirmation{/ts}{/if} - {$event.event_title}
+', '{assign var="greeting" value="{contact.email_greeting}"}{if $greeting}{$greeting},{/if}
 {if $event.confirm_email_text AND (not $isOnWaitlist AND not $isRequireApproval)}
 {$event.confirm_email_text}
 
@@ -14263,7 +14276,7 @@ INSERT INTO civicrm_msg_template
 {if $payer.name}
 You were registered by: {$payer.name}
 {/if}
-{if $event.is_monetary} {* This section for Paid events only.*}
+{if $event.is_monetary and not $isRequireApproval} {* This section for Paid events only.*}
 
 ==========================================================={if $pricesetFieldsCount }===================={/if}
 
@@ -14489,7 +14502,7 @@ You were registered by: {$payer.name}
 
   <tr>
    <td>
-  <p>{contact.email_greeting},</p>
+     {assign var="greeting" value="{contact.email_greeting}"}{if $greeting}<p>{$greeting},</p>{/if}
 
     {if $event.confirm_email_text AND (not $isOnWaitlist AND not $isRequireApproval)}
      <p>{$event.confirm_email_text|htmlize}</p>
@@ -14641,7 +14654,7 @@ You were registered by: {$payer.name}
        </td>
      </tr>
     {/if}
-    {if $event.is_monetary}
+    {if $event.is_monetary and not $isRequireApproval}
 
       <tr>
        <th {$headerStyle}>
@@ -14977,8 +14990,8 @@ You were registered by: {$payer.name}
 </body>
 </html>
 ', @tpl_ovid_event_online_receipt, 1,          0),
-      ('Événements - Confirmation d\'inscription et reçu (en ligne)', '{if $isOnWaitlist}{ts}Wait List Confirmation{/ts}{else}{ts}Registration Confirmation{/ts}{/if} - {$event.event_title}', '{contact.email_greeting},
-
+      ('Événements - Confirmation d\'inscription et reçu (en ligne)', '{if $isOnWaitlist}{ts}Wait List Confirmation{/ts}{elseif $isRequireApproval}{ts}Registration Request Confirmation{/ts}{else}{ts}Registration Confirmation{/ts}{/if} - {$event.event_title}
+', '{assign var="greeting" value="{contact.email_greeting}"}{if $greeting}{$greeting},{/if}
 {if $event.confirm_email_text AND (not $isOnWaitlist AND not $isRequireApproval)}
 {$event.confirm_email_text}
 
@@ -15080,7 +15093,7 @@ You were registered by: {$payer.name}
 {if $payer.name}
 You were registered by: {$payer.name}
 {/if}
-{if $event.is_monetary} {* This section for Paid events only.*}
+{if $event.is_monetary and not $isRequireApproval} {* This section for Paid events only.*}
 
 ==========================================================={if $pricesetFieldsCount }===================={/if}
 
@@ -15306,7 +15319,7 @@ You were registered by: {$payer.name}
 
   <tr>
    <td>
-  <p>{contact.email_greeting},</p>
+     {assign var="greeting" value="{contact.email_greeting}"}{if $greeting}<p>{$greeting},</p>{/if}
 
     {if $event.confirm_email_text AND (not $isOnWaitlist AND not $isRequireApproval)}
      <p>{$event.confirm_email_text|htmlize}</p>
@@ -15458,7 +15471,7 @@ You were registered by: {$payer.name}
        </td>
      </tr>
     {/if}
-    {if $event.is_monetary}
+    {if $event.is_monetary and not $isRequireApproval}
 
       <tr>
        <th {$headerStyle}>
@@ -18881,7 +18894,8 @@ or want to inquire about reinstating your registration for this event.{/ts}</p>
       
       
       ('Adhésions - Reçu (en ligne)', '{if $is_pay_later}{ts}Invoice{/ts}{else}{ts}Receipt{/ts}{/if} - {$title}
-', '{if $receipt_text}
+', '{assign var="greeting" value="{contact.email_greeting}"}{if $greeting}{$greeting},{/if}
+{if $receipt_text}
 {$receipt_text}
 {/if}
 {if $is_pay_later}
@@ -19145,7 +19159,7 @@ or want to inquire about reinstating your registration for this event.{/ts}</p>
 
   <tr>
    <td>
-
+     {assign var="greeting" value="{contact.email_greeting}"}{if $greeting}<p>{$greeting},</p>{/if}
     {if $receipt_text}
      <p>{$receipt_text|htmlize}</p>
     {/if}
@@ -19680,7 +19694,8 @@ or want to inquire about reinstating your registration for this event.{/ts}</p>
 </html>
 ', @tpl_ovid_membership_online_receipt, 1,          0),
       ('Adhésions - Reçu (en ligne)', '{if $is_pay_later}{ts}Invoice{/ts}{else}{ts}Receipt{/ts}{/if} - {$title}
-', '{if $receipt_text}
+', '{assign var="greeting" value="{contact.email_greeting}"}{if $greeting}{$greeting},{/if}
+{if $receipt_text}
 {$receipt_text}
 {/if}
 {if $is_pay_later}
@@ -19944,7 +19959,7 @@ or want to inquire about reinstating your registration for this event.{/ts}</p>
 
   <tr>
    <td>
-
+     {assign var="greeting" value="{contact.email_greeting}"}{if $greeting}<p>{$greeting},</p>{/if}
     {if $receipt_text}
      <p>{$receipt_text|htmlize}</p>
     {/if}
@@ -23469,7 +23484,7 @@ VALUES
 INSERT INTO civicrm_navigation
     ( domain_id, url, label, name, permission, permission_operator, parent_id, is_active, has_separator, weight )
 VALUES
-    ( @domainID, NULL, 'Dropdown Options', 'Dropdown Options', 'administer CiviCRM', '', @CustomizelastID, '1', NULL, 8 );
+    ( @domainID, 'civicrm/admin/options?action=browse&reset=1', 'Dropdown Options', 'Dropdown Options', 'administer CiviCRM', '', @CustomizelastID, '1', NULL, 8 );
 
 SET @optionListlastID:=LAST_INSERT_ID();
 INSERT INTO civicrm_navigation
@@ -23964,4 +23979,4 @@ INSERT INTO `civicrm_report_instance`
     ( `domain_id`, `title`, `report_id`, `description`, `permission`, `form_values`)
 VALUES
     (  @domainID, 'Survey Details', 'survey/detail', 'Detailed report for canvassing, phone-banking, walk lists or other surveys.', 'access CiviReport', 'a:39:{s:6:"fields";a:2:{s:9:"sort_name";s:1:"1";s:6:"result";s:1:"1";}s:22:"assignee_contact_id_op";s:2:"eq";s:25:"assignee_contact_id_value";s:0:"";s:12:"sort_name_op";s:3:"has";s:15:"sort_name_value";s:0:"";s:17:"street_number_min";s:0:"";s:17:"street_number_max";s:0:"";s:16:"street_number_op";s:3:"lte";s:19:"street_number_value";s:0:"";s:14:"street_name_op";s:3:"has";s:17:"street_name_value";s:0:"";s:15:"postal_code_min";s:0:"";s:15:"postal_code_max";s:0:"";s:14:"postal_code_op";s:3:"lte";s:17:"postal_code_value";s:0:"";s:7:"city_op";s:3:"has";s:10:"city_value";s:0:"";s:20:"state_province_id_op";s:2:"in";s:23:"state_province_id_value";a:0:{}s:13:"country_id_op";s:2:"in";s:16:"country_id_value";a:0:{}s:12:"survey_id_op";s:2:"in";s:15:"survey_id_value";a:0:{}s:12:"status_id_op";s:2:"eq";s:15:"status_id_value";s:1:"1";s:11:"custom_1_op";s:2:"in";s:14:"custom_1_value";a:0:{}s:11:"custom_2_op";s:2:"in";s:14:"custom_2_value";a:0:{}s:17:"custom_3_relative";s:1:"0";s:13:"custom_3_from";s:0:"";s:11:"custom_3_to";s:0:"";s:11:"description";s:75:"Detailed report for canvassing, phone-banking, walk lists or other surveys.";s:13:"email_subject";s:0:"";s:8:"email_to";s:0:"";s:8:"email_cc";s:0:"";s:10:"permission";s:17:"access CiviReport";s:6:"groups";s:0:"";s:9:"domain_id";i:1;}');
-UPDATE civicrm_domain SET version = '5.3.1';
+UPDATE civicrm_domain SET version = '5.5.2';
