@@ -1038,7 +1038,7 @@ class CRM_Contact_Selector extends CRM_Core_Selector_Base implements CRM_Core_Se
     // the other alternative of running the FULL query will just be incredibly inefficient
     // and slow things down way too much on large data sets / complex queries
 
-    $selectSQL = "SELECT DISTINCT '$cacheKey', contact_a.id, contact_a.sort_name";
+    $selectSQL = "SELECT DISTINCT \"" . CRM_Core_DAO::escapeString($cacheKey) . "\", contact_a.id, contact_a.sort_name";
 
     $sql = str_replace(array("SELECT contact_a.id as contact_id", "SELECT contact_a.id as id"), $selectSQL, $sql);
     try {

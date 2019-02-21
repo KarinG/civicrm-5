@@ -4833,11 +4833,11 @@ VALUES
    ('communication_style'           , 'Stil komunikacije'                , NULL, 1, 1, 0),
    ('msg_mode'                      , 'Mod poruke'                       , NULL, 1, 1, 0),
    ('contact_date_reminder_options' , 'Opcije datuma podsetnika za kontakt'      , NULL, 1, 1, 1),
-   ('wysiwyg_presets'               , 'WYSIWYG Editor Presets'             , NULL, 1, 1, 0),
+   ('wysiwyg_presets'               , 'Sačuvana podešavanja WYSIWYG Editora'             , NULL, 1, 1, 0),
    ('relative_date_filters'         , 'Filteri relativnog datuma'              , NULL, 1, 1, 0),
-   ('pledge_status'                 , 'Pledge Status'                      , NULL, 1, 1, 1),
-   ('environment'                   , 'Environment'                        , NULL, 1, 1, 0),
-   ('activity_default_assignee'     , 'Activity default assignee'          , NULL, 1, 1, 0);
+   ('pledge_status'                 , 'Status obaveze'                      , NULL, 1, 1, 1),
+   ('environment'                   , 'Okruženje'                        , NULL, 1, 1, 0),
+   ('activity_default_assignee'     , 'Podrazumevani asignat aktivnosti'          , NULL, 1, 1, 0);
 
 SELECT @option_group_id_pcm            := max(id) from civicrm_option_group where name = 'preferred_communication_method';
 SELECT @option_group_id_act            := max(id) from civicrm_option_group where name = 'activity_type';
@@ -4957,7 +4957,7 @@ VALUES
    (@option_group_id_act, 'Praćenje',          14, 'Follow up',          NULL, 0,  0, 14, '', 0, 1, 1, @caseCompId, NULL, 'fa-share-square-o'),
    (@option_group_id_act, 'Promeni tip predmeta',   15, 'Change Case Type',   NULL, 0,  0, 15, '', 0, 1, 1, @caseCompId, NULL, 'fa-random'),
    (@option_group_id_act, 'Promeni status predmeta', 16, 'Change Case Status', NULL, 0,  0, 16, '', 0, 1, 1, @caseCompId, NULL, 'fa-pencil-square-o'),
-   (@option_group_id_act, 'Change Case Subject',53, 'Change Case Subject',NULL, 0,  0, 53, '', 0, 1, 1, @caseCompId, NULL, 'fa-pencil-square-o'),
+   (@option_group_id_act, 'Promeni subjekat predmeta',53, 'Change Case Subject',NULL, 0,  0, 53, '', 0, 1, 1, @caseCompId, NULL, 'fa-pencil-square-o'),
    (@option_group_id_act, 'Izmeni korisničke/sopstvene podatke', 33, 'Change Custom Data', NULL, 0,  0, 33, '', 0, 1, 1, @caseCompId, NULL, 'fa-table'),
 
    (@option_group_id_act, 'Podsetnik za obnavljanje članstva',        17, 'Membership Renewal Reminder',  NULL, 1, NULL, 17, 'Podsetnik za oflajn obnavljanje članstva.',                      0, 1, 1, @memberCompId, NULL, NULL),
@@ -5264,7 +5264,7 @@ VALUES
   (@option_group_id_report,  'Detaljni Mail izveštaj',                                            'mailing/detail',     'CRM_Report_Form_Mailing_Detail',          NULL, 0, NULL, 47,  'Prikazuje izveštaj o planiranoj i uspešnoj dostavi mailinga, odjava, isključenja, odgovora i prosleđivanja.',   0, 0, 1, @mailCompId, NULL, NULL),
   (@option_group_id_report, 'Detalji o donaciji i članstvu', 'member/contributionDetail', 'CRM_Report_Form_Member_ContributionDetail', NULL, 0, NULL, 48, 'Detalji o donacijama za bilo koji tip donacije, plus povezane informacije o članstvu za donacije za plaćanje članarine.', 0, 0, 1, @memberCompId, NULL, NULL),
   (@option_group_id_report, 'Izveštaj o periodičnim donacijama', 'contribute/recur', 'CRM_Report_Form_Contribute_Recur',               NULL, 0, NULL, 49, 'Pruža informacije o statusu periodičnih donacija', 0, 0, 1, @contributeCompId, NULL, NULL),
-  (@option_group_id_report, 'Kratak pregled periodičnih donacija', 'contribute/recursummary', 'CRM_Report_Form_Contribute_RecurSummary',               NULL, 0, NULL, 49, 'Provides simple summary for each payment instrument for which there are recurring contributions (e.g. Credit Card, Standing Order, Direct Debit, etc., NULL), showing within a given date range.', 0, 0, 1, @contributeCompId, NULL, NULL),
+  (@option_group_id_report, 'Kratak pregled periodičnih donacija', 'contribute/recursummary', 'CRM_Report_Form_Contribute_RecurSummary',               NULL, 0, NULL, 49, 'Pruža jednostavan kratak pregled svakog sredstva plaćanja za koje postoje periodične donacije (npr. kreditna kartica, trajni nalog, zaduženje itd.), prikazane u datom opsegu datuma.', 0, 0, 1, @contributeCompId, NULL, NULL),
   (@option_group_id_report, 'Detalji odloženog prihoda', 'contribute/deferredrevenue', 'CRM_Report_Form_Contribute_DeferredRevenue', NULL, 0, NULL, 50, 'Izveštaj o detaljima odloženog prihoda', 0, 0, 1, @contributeCompId, NULL, NULL),
 
   (@option_group_id_acs, 'Zakazano',    1, 'Scheduled',    NULL, 0, 1,    1, NULL, 0, 1, 1, NULL, NULL, NULL),
@@ -5592,7 +5592,7 @@ VALUES
 (@option_group_id_wysiwyg_presets, 'CiviEvent', '3', 'civievent', NULL, NULL, 0, 3, NULL, 0, 1, 1, @eventCompId, NULL, NULL),
 
 -- Environment
-(@option_group_id_env, 'Production', 'Production', 'Production', NULL, NULL, 1, 1, 'Production Environment', 0, 1, 1, NULL, NULL, NULL),
+(@option_group_id_env, 'Produkcija', 'Production', 'Production', NULL, NULL, 1, 1, 'Production Environment', 0, 1, 1, NULL, NULL, NULL),
 (@option_group_id_env, 'Staging', 'Staging', 'Staging', NULL, NULL, 0, 2, 'Staging Environment', 0, 1, 1, NULL, NULL, NULL),
 (@option_group_id_env, 'Development', 'Development', 'Development', NULL, NULL, 0, 3, 'Development Environment', 0, 1, 1, NULL, NULL, NULL),
 
@@ -5671,7 +5671,7 @@ VALUES
 --  (`option_group_id`,             `label`,                                                `value`, `name`,                    `grouping`, `filter`, `is_default`, `weight`, `description`, `is_optgroup`, `is_reserved`, `is_active`, `component_id`, `visibility_id`, `icon`)
 (@option_group_id_default_assignee, 'nije izabrano',                           '1',     'NONE',                    NULL,       0,         1,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL),
 (@option_group_id_default_assignee, 'By relationship to case client', '2',     'BY_RELATIONSHIP',         NULL,       0,         0,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL),
-(@option_group_id_default_assignee, 'Specific contact',               '3',     'SPECIFIC_CONTACT',        NULL,       0,         0,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL),
+(@option_group_id_default_assignee, 'Specifičan kontakt',               '3',     'SPECIFIC_CONTACT',        NULL,       0,         0,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL),
 (@option_group_id_default_assignee, 'User creating the case',          '4',     'USER_CREATING_THE_CASE',  NULL,       0,         0,           1,         NULL,          0,             0,             1,           NULL,            NULL,           NULL);
 
 -- financial accounts
@@ -23979,4 +23979,4 @@ INSERT INTO `civicrm_report_instance`
     ( `domain_id`, `title`, `report_id`, `description`, `permission`, `form_values`)
 VALUES
     (  @domainID, 'Survey Details', 'survey/detail', 'Detailed report for canvassing, phone-banking, walk lists or other surveys.', 'access CiviReport', 'a:39:{s:6:"fields";a:2:{s:9:"sort_name";s:1:"1";s:6:"result";s:1:"1";}s:22:"assignee_contact_id_op";s:2:"eq";s:25:"assignee_contact_id_value";s:0:"";s:12:"sort_name_op";s:3:"has";s:15:"sort_name_value";s:0:"";s:17:"street_number_min";s:0:"";s:17:"street_number_max";s:0:"";s:16:"street_number_op";s:3:"lte";s:19:"street_number_value";s:0:"";s:14:"street_name_op";s:3:"has";s:17:"street_name_value";s:0:"";s:15:"postal_code_min";s:0:"";s:15:"postal_code_max";s:0:"";s:14:"postal_code_op";s:3:"lte";s:17:"postal_code_value";s:0:"";s:7:"city_op";s:3:"has";s:10:"city_value";s:0:"";s:20:"state_province_id_op";s:2:"in";s:23:"state_province_id_value";a:0:{}s:13:"country_id_op";s:2:"in";s:16:"country_id_value";a:0:{}s:12:"survey_id_op";s:2:"in";s:15:"survey_id_value";a:0:{}s:12:"status_id_op";s:2:"eq";s:15:"status_id_value";s:1:"1";s:11:"custom_1_op";s:2:"in";s:14:"custom_1_value";a:0:{}s:11:"custom_2_op";s:2:"in";s:14:"custom_2_value";a:0:{}s:17:"custom_3_relative";s:1:"0";s:13:"custom_3_from";s:0:"";s:11:"custom_3_to";s:0:"";s:11:"description";s:75:"Detailed report for canvassing, phone-banking, walk lists or other surveys.";s:13:"email_subject";s:0:"";s:8:"email_to";s:0:"";s:8:"email_cc";s:0:"";s:10:"permission";s:17:"access CiviReport";s:6:"groups";s:0:"";s:9:"domain_id";i:1;}');
-UPDATE civicrm_domain SET version = '5.7.3';
+UPDATE civicrm_domain SET version = '5.7.4';
