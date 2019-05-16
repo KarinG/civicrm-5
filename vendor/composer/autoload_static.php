@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit24b9f67f7474654be9c8050e43572070
+class ComposerStaticInit4cfe5c4c4ead141405b944a05c85a283
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -18,6 +18,10 @@ class ComposerStaticInit24b9f67f7474654be9c8050e43572070
     );
 
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'cweagans\\Composer\\' => 18,
+        ),
         'Z' => 
         array (
             'Zend\\Validator\\' => 15,
@@ -44,6 +48,7 @@ class ComposerStaticInit24b9f67f7474654be9c8050e43572070
         ),
         'M' => 
         array (
+            'MimeType\\' => 9,
             'MJS\\TopSort\\Tests\\' => 18,
             'MJS\\TopSort\\' => 12,
         ),
@@ -68,6 +73,10 @@ class ComposerStaticInit24b9f67f7474654be9c8050e43572070
     );
 
     public static $prefixDirsPsr4 = array (
+        'cweagans\\Composer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cweagans/composer-patches/src',
+        ),
         'Zend\\Validator\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-validator/src',
@@ -127,6 +136,10 @@ class ComposerStaticInit24b9f67f7474654be9c8050e43572070
         'PhpOffice\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoffice/common/src/Common',
+        ),
+        'MimeType\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/katzien/php-mime-type/src',
         ),
         'MJS\\TopSort\\Tests\\' => 
         array (
@@ -397,10 +410,10 @@ class ComposerStaticInit24b9f67f7474654be9c8050e43572070
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit24b9f67f7474654be9c8050e43572070::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit24b9f67f7474654be9c8050e43572070::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit24b9f67f7474654be9c8050e43572070::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit24b9f67f7474654be9c8050e43572070::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4cfe5c4c4ead141405b944a05c85a283::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4cfe5c4c4ead141405b944a05c85a283::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit4cfe5c4c4ead141405b944a05c85a283::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit4cfe5c4c4ead141405b944a05c85a283::$classMap;
 
         }, null, ClassLoader::class);
     }

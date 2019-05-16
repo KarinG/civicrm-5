@@ -917,7 +917,19 @@ HTACCESS;
     else {
       $path = $url = $imageURL;
     }
-    $mimeType = 'image/' . strtolower(pathinfo($path, PATHINFO_EXTENSION));
+    $fileExtension = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+    //According to (https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types),
+    // there are some extensions that would need translating.:
+    $translateMimeTypes = [
+      'tif' => 'tiff',
+      'jpg' => 'jpeg',
+      'svg' => 'svg+xml',
+    ];
+    $mimeType = 'image/' . CRM_Utils_Array::value(
+        $fileExtension,
+        $translateMimeTypes,
+        $fileExtension
+      );
 
     return self::getFileURL($path, $mimeType, $url);
   }
@@ -1051,6 +1063,31 @@ HTACCESS;
       return $check;
     }
     return FALSE;
+  }
+
+  /**
+   * Get the extensions that this MimeTpe is for
+   * @param string $mimeType the mime-type we want extensions for
+   * @return array
+   */
+  public static function getAcceptableExtensionsForMimeType($mimeType = NULL) {
+    $mapping = \MimeType\Mapping::$types;
+    $extensions = [];
+    foreach ($mapping as $extension => $type) {
+      if ($mimeType == $type) {
+        $extensions[] = $extension;
+      }
+    }
+    return $extensions;
+  }
+
+  /**
+   * Get the extension of a file based on its path
+   * @param string $path path of the file to query
+   * @return string
+   */
+  public static function getExtensionFromPath($path) {
+    return pathinfo($path, PATHINFO_EXTENSION);
   }
 
 }
