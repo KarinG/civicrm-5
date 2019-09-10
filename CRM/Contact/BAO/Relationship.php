@@ -3,7 +3,7 @@
  +--------------------------------------------------------------------+
  | CiviCRM version 5                                                  |
  +--------------------------------------------------------------------+
- | Copyright CiviCRM LLC (c) 2004-2018                                |
+ | Copyright CiviCRM LLC (c) 2004-2019                                |
  +--------------------------------------------------------------------+
  | This file is a part of CiviCRM.                                    |
  |                                                                    |
@@ -284,15 +284,15 @@ class CRM_Contact_BAO_Relationship extends CRM_Contact_DAO_Relationship {
    *
    * @return CRM_Contact_BAO_Relationship
    */
-  public static function add(&$params, $ids = array(), $contactId = NULL) {
-    $relationshipId = CRM_Utils_Array::value('relationship', $ids, CRM_Utils_Array::value('id', $params));
+  public static function add($params, $ids = array(), $contactId = NULL) {
+    $params['id'] = CRM_Utils_Array::value('relationship', $ids, CRM_Utils_Array::value('id', $params));
 
     $hook = 'create';
-    if ($relationshipId) {
+    if ($params['id']) {
       $hook = 'edit';
     }
     //@todo hook are called from create and add - remove one
-    CRM_Utils_Hook::pre($hook, 'Relationship', $relationshipId, $params);
+    CRM_Utils_Hook::pre($hook, 'Relationship', $params['id'], $params);
 
     $relationshipTypes = CRM_Utils_Array::value('relationship_type_id', $params);
 
@@ -306,7 +306,7 @@ class CRM_Contact_BAO_Relationship extends CRM_Contact_DAO_Relationship {
     if ($type == 6) {
       CRM_Contact_BAO_Household::updatePrimaryContact($params['contact_id_b'], $params['contact_id_a']);
     }
-    if (!empty($relationshipId) && self::isCurrentEmployerNeedingToBeCleared($params, $relationshipId, $type)) {
+    if (!empty($params['id']) && self::isCurrentEmployerNeedingToBeCleared($params, $params['id'], $type)) {
       CRM_Contact_BAO_Contact_Utils::clearCurrentEmployer($params['contact_id_a']);
     }
     $relationship = new CRM_Contact_BAO_Relationship();
@@ -316,7 +316,7 @@ class CRM_Contact_BAO_Relationship extends CRM_Contact_DAO_Relationship {
     $relationship->contact_id_b = $params['contact_id_b'];
     $relationship->contact_id_a = $params['contact_id_a'];
     $relationship->relationship_type_id = $type;
-    $relationship->id = $relationshipId;
+    $relationship->id = $params['id'];
 
     $dateFields = array('end_date', 'start_date');
 
@@ -332,7 +332,7 @@ class CRM_Contact_BAO_Relationship extends CRM_Contact_DAO_Relationship {
           $relationship->$defaultField = $params[$defaultField];
         }
       }
-      elseif (!$relationshipId) {
+      elseif (empty($params['id'])) {
         $relationship->$defaultField = $defaultValue;
       }
     }
@@ -484,7 +484,6 @@ class CRM_Contact_BAO_Relationship extends CRM_Contact_DAO_Relationship {
       'end_date' => 'NULL',
     );
   }
-
 
   /**
    * Check if there is data to create the object.
@@ -1434,6 +1433,7 @@ LEFT JOIN  civicrm_country ON (civicrm_address.country_id = civicrm_country.id)
               if ($values[$rid]['rtype'] == 'b_a') {
                 $replace['clientid'] = $values[$rid]['cid'];
               }
+              $values[$rid]['case'] = '<a href="' . CRM_Utils_System::url('civicrm/case/ajax/details', sprintf('caseId=%d&cid=%d&snippet=4', $values[$rid]['case_id'], $values[$rid]['cid'])) . '" class="action-item crm-hover-button crm-summary-link"><i class="crm-i fa-folder-open-o"></i></a>';
             }
           }
 
@@ -1464,12 +1464,12 @@ LEFT JOIN  civicrm_country ON (civicrm_address.country_id = civicrm_country.id)
    * @return array
    *   array reference of all relationship types with context to current contact type .
    */
-  static public function getRelationType($targetContactType) {
+  public static function getRelationType($targetContactType) {
     $relationshipType = array();
     $allRelationshipType = CRM_Core_PseudoConstant::relationshipType();
 
     foreach ($allRelationshipType as $key => $type) {
-      if ($type['contact_type_b'] == $targetContactType) {
+      if ($type['contact_type_b'] == $targetContactType || empty($type['contact_type_b'])) {
         $relationshipType[$key . '_a_b'] = $type['label_a_b'];
       }
     }
@@ -2037,7 +2037,6 @@ AND cc.sort_name LIKE '%$name%'";
     }
   }
 
-
   /**
    * Wrapper for contact relationship selector.
    *
@@ -2120,7 +2119,7 @@ AND cc.sort_name LIKE '%$name%'";
             'civicrm/contact/view',
             "reset=1&cid={$values['cid']}");
 
-        $relationship['relation'] = CRM_Utils_System::href(
+        $relationship['relation'] = CRM_Utils_Array::value('case', $values, '') . CRM_Utils_System::href(
           $values['relation'],
           'civicrm/contact/view/rel',
           "action=view&reset=1&cid={$values['cid']}&id={$values['id']}&rtype={$values['rtype']}");

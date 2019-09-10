@@ -3,7 +3,7 @@
  +--------------------------------------------------------------------+
  | CiviCRM version 5                                                  |
  +--------------------------------------------------------------------+
- | Copyright CiviCRM LLC (c) 2004-2018                                |
+ | Copyright CiviCRM LLC (c) 2004-2019                                |
  +--------------------------------------------------------------------+
  | This file is a part of CiviCRM.                                    |
  |                                                                    |
@@ -28,7 +28,7 @@
 /**
  *
  * @package CRM
- * @copyright CiviCRM LLC (c) 2004-2018
+ * @copyright CiviCRM LLC (c) 2004-2019
  * $Id$
  *
  */
@@ -42,9 +42,12 @@ class CRM_Core_Page_File extends CRM_Core_Page {
     $download = CRM_Utils_Request::retrieve('download', 'Integer', $this, FALSE, 1);
     $disposition = $download == 0 ? 'inline' : 'download';
 
-    $entityId = CRM_Utils_Request::retrieve('eid', 'Positive', $this, FALSE); // Entity ID (e.g. Contact ID)
-    $fieldId = CRM_Utils_Request::retrieve('fid', 'Positive', $this, FALSE); // Field ID
-    $fileId = CRM_Utils_Request::retrieve('id', 'Positive', $this, FALSE); // File ID
+    // Entity ID (e.g. Contact ID)
+    $entityId = CRM_Utils_Request::retrieve('eid', 'Positive', $this, FALSE);
+    // Field ID
+    $fieldId = CRM_Utils_Request::retrieve('fid', 'Positive', $this, FALSE);
+    // File ID
+    $fileId = CRM_Utils_Request::retrieve('id', 'Positive', $this, FALSE);
     $fileName = CRM_Utils_Request::retrieve('filename', 'String', $this, FALSE);
     if (empty($fileName) && (empty($entityId) || empty($fileId))) {
       CRM_Core_Error::statusBounce("Cannot access file: Must pass either \"Filename\" or the combination of \"Entity ID\" + \"File ID\"");

@@ -3,7 +3,7 @@
  +--------------------------------------------------------------------+
  | CiviCRM version 5                                                  |
  +--------------------------------------------------------------------+
- | Copyright CiviCRM LLC (c) 2004-2018                                |
+ | Copyright CiviCRM LLC (c) 2004-2019                                |
  +--------------------------------------------------------------------+
  | This file is a part of CiviCRM.                                    |
  |                                                                    |
@@ -28,7 +28,7 @@
 /**
  *
  * @package CRM
- * @copyright CiviCRM LLC (c) 2004-2018
+ * @copyright CiviCRM LLC (c) 2004-2019
  */
 
 /**
@@ -133,7 +133,7 @@ class CRM_Core_BAO_Note extends CRM_Core_DAO_Note {
    *   (reference) an assoc array of name/value pairs.
    * @param array $ids
    *   (deprecated) associated array with note id - preferably set $params['id'].
-   * @return null|object $note
+   * @return null|object
    *   $note CRM_Core_BAO_Note object
    * @throws \CRM_Exception
    */
