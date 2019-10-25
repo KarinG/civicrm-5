@@ -146,7 +146,12 @@
         {foreach from=$componentIds item=voterId}
         <tr id="row_{$voterId}" class="{cycle values="odd-row,even-row"}" entity_id="{$voterId}">
           {foreach from=$readOnlyFields item=fTitle key=fName}
-            <td {if $fName neq 'contact_type'} class="name"{/if}>{$voterDetails.$voterId.$fName}</td>
+            {if $fName neq 'contact_type'}<td class="name">
+<a target="_blank" href="{crmURL p='civicrm/contact/view' q="reset=1&cid=$voterId"}">{$voterDetails.$voterId.$fName}</a>
+<a class="button" target="_blank" href="{crmURL p='civicrm/contribute/transact' q="reset=1&id=1&cid=$voterId"}">One-time</a>
+<a class="button" target="_blank" href="{crmURL p='civicrm/contribute/transact' q="reset=1&id=2&cid=$voterId"}">Monthly</a>
+</td>
+            {else}<td>{$voterDetails.$voterId.$fName}</td>{/if}
           {/foreach}
 
         {* here build the survey profile fields *}

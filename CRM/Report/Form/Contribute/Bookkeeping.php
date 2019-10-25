@@ -349,7 +349,7 @@ class CRM_Report_Form_Contribute_Bookkeeping extends CRM_Report_Form {
           ],
           'currency' => [
             'required' => TRUE,
-            'no_display' => TRUE,
+            'default' => TRUE,
           ],
           'trxn_date' => [
             'title' => ts('Transaction Date'),

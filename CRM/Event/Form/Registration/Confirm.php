@@ -294,9 +294,11 @@ class CRM_Event_Form_Registration_Confirm extends CRM_Event_Form_Registration {
             $lineItemForTemplate[$key] = $value;
           }
           if ($invoicing) {
-            foreach ($value as $v) {
+            foreach ($value as $k => $v) {
               if (isset($v['tax_rate'])) {
                 $getTaxDetails = TRUE;
+                // Cast to float to display without trailing zero decimals
+                $lineItemForTemplate[$key][$k]['tax_rate'] = (float) $v['tax_rate'];
               }
             }
           }
@@ -721,10 +723,10 @@ class CRM_Event_Form_Registration_Confirm extends CRM_Event_Form_Registration {
             if (isset($line['tax_amount']) && isset($line['tax_rate'])) {
               $totalTaxAmount = $line['tax_amount'] + $totalTaxAmount;
               if (isset($dataArray[$line['tax_rate']])) {
-                $dataArray[$line['tax_rate']] = $dataArray[$line['tax_rate']] + CRM_Utils_Array::value('tax_amount', $line);
+                $dataArray[$line['tax_rate']] = (float) ($dataArray[$line['tax_rate']] + CRM_Utils_Array::value('tax_amount', $line));
               }
               else {
-                $dataArray[$line['tax_rate']] = CRM_Utils_Array::value('tax_amount', $line);
+                $dataArray[$line['tax_rate']] = (float) CRM_Utils_Array::value('tax_amount', $line);
               }
             }
           }
@@ -1332,6 +1334,8 @@ class CRM_Event_Form_Registration_Confirm extends CRM_Event_Form_Registration {
       return [$result, $value];
     }
     catch (\Civi\Payment\Exception\PaymentProcessorException $e) {
+      if (isset($payment->gateway)) $payment->gateway = NULL;
+      Civi::log()->error('Payment processor attempt: ' . '<pre>'.print_r($value).'</pre>');
       Civi::log()->error('Payment processor exception: ' . $e->getMessage());
       CRM_Core_Session::singleton()->setStatus($e->getMessage());
       CRM_Utils_System::redirect(CRM_Utils_System::url('civicrm/event/register', "id={$this->_eventId}"));

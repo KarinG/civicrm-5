@@ -105,7 +105,7 @@ class CRM_Contribute_Form_AdditionalInfo {
     $form->addRule('non_deductible_amount', ts('Please enter a valid monetary value for Non-deductible Amount.'), 'money');
 
     if ($form->_online) {
-      $nonDeductAmount->freeze();
+      // $nonDeductAmount->freeze();
     }
     $feeAmount = &$form->add('text', 'fee_amount', ts('Fee Amount'),
       $attributes['fee_amount']

@@ -94,6 +94,7 @@ class CRM_Contribute_Form_Contribution_Main extends CRM_Contribute_Form_Contribu
     if (!empty($this->_values['footer_text'])) {
       $this->assign('footer_text', $this->_values['footer_text']);
     }
+    $this->assign('currency', $this->_values['currency']);
   }
 
   /**

@@ -432,13 +432,14 @@ class CRM_Contribute_BAO_ContributionPage extends CRM_Contribute_DAO_Contributio
       }
 
       // use either the contribution or membership receipt, based on whether it’s a membership-related contrib or not
+      $PDFFilename = $values['is_pay_later'] ? 'invoice.pdf' : 'receipt.pdf';
       $sendTemplateParams = [
         'groupName' => !empty($values['isMembership']) ? 'msg_tpl_workflow_membership' : 'msg_tpl_workflow_contribution',
         'valueName' => !empty($values['isMembership']) ? 'membership_online_receipt' : 'contribution_online_receipt',
         'contactId' => $contactID,
         'tplParams' => $tplParams,
         'isTest' => $isTest,
-        'PDFFilename' => 'receipt.pdf',
+        'PDFFilename' => $PDFFilename,
       ];
 
       if ($returnMessageText) {

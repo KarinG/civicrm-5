@@ -1295,6 +1295,7 @@ class CRM_Contribute_Form_Contribution_Confirm extends CRM_Contribute_Form_Contr
         'currency' => $contributionSoft->currency,
       ];
       $domainValues = CRM_Core_BAO_Domain::getNameAndEmail();
+      $PDFFilename = $isPayLater ? 'invoice.pdf' : 'receipt.pdf';
       $sendTemplateParams = [
         'groupName' => 'msg_tpl_workflow_contribution',
         'valueName' => 'pcp_owner_notify',
@@ -1303,7 +1304,7 @@ class CRM_Contribute_Form_Contribution_Confirm extends CRM_Contribute_Form_Contr
         'toName' => $ownerName,
         'from' => "$domainValues[0] <$domainValues[1]>",
         'tplParams' => $tplParams,
-        'PDFFilename' => 'receipt.pdf',
+        'PDFFilename' => $PDFFilename,
       ];
       CRM_Core_BAO_MessageTemplate::sendTemplate($sendTemplateParams);
     }
@@ -2466,6 +2467,8 @@ class CRM_Contribute_Form_Contribution_Confirm extends CRM_Contribute_Form_Contr
       }
       catch (CiviCRM_API3_Exception $e) {
         if ($e->getErrorCode() != 'contribution_completed') {
+          CRM_Core_Error::debug_var('Unexpected Error', $e);
+          CRM_Core_Error::debug_var('Result', $result);
           throw new CRM_Core_Exception('Failed to update contribution in database');
         }
       }

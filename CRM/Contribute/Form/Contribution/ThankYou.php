@@ -75,6 +75,15 @@ class CRM_Contribute_Form_Contribution_ThankYou extends CRM_Contribute_Form_Cont
       $this->assign('pay_later_receipt', $this->_values['pay_later_receipt']);
     }
     $this->assign('is_for_organization', CRM_Utils_Array::value('is_for_organization', $this->_params));
+    //Set email-bltID if pre/post profile contains an email.
+    if ($this->_emailExists == TRUE) {
+      foreach ($this->_params as $key => $val) {
+        if (substr($key, 0, 6) == 'email-' && empty($this->_params["email-{$this->_bltID}"])) {
+          $this->_params["email-{$this->_bltID}"] = $this->_params[$key];
+          break;
+        }
+      }
+    }
   }
 
   /**

@@ -115,6 +115,21 @@ class CRM_Report_Form_Member_ContributionDetail extends CRM_Report_Form {
         ],
         'grouping' => 'contact-fields',
       ],
+      'civicrm_employer' => [
+        'dao' => 'CRM_Contact_DAO_Contact',
+        'grouping' => 'contact-fields',
+        'fields' => [
+          'id' => [
+            'no_display' => TRUE,
+            'required' => TRUE,
+          ],
+          'organization_name' => [
+            'title' => ts('Employer'),
+            'default' => TRUE,
+            'no_repeat' => TRUE,
+          ],
+        ],
+      ],
       'civicrm_email' => [
         'dao' => 'CRM_Core_DAO_Email',
         'fields' => [
@@ -450,6 +465,8 @@ class CRM_Report_Form_Member_ContributionDetail extends CRM_Report_Form {
                       ON ({$this->tableName}.membership_id = {$this->_aliases['civicrm_membership']}.id)
               INNER JOIN civicrm_contact {$this->_aliases['civicrm_contact']}
                       ON ({$this->tableName}.contact_id = {$this->_aliases['civicrm_contact']}.id)
+              LEFT JOIN civicrm_contact {$this->_aliases['civicrm_employer']}
+                      ON ({$this->_aliases['civicrm_employer']}.id  = {$this->_aliases['civicrm_contact']}.employer_id  )
               LEFT  JOIN civicrm_membership_status {$this->_aliases['civicrm_membership_status']}
                           ON {$this->_aliases['civicrm_membership_status']}.id =
                              {$this->_aliases['civicrm_membership']}.status_id
