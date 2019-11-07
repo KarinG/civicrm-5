@@ -63,11 +63,14 @@ class CRM_Core_ClassLoader {
   }
 
   /**
-   * @var bool TRUE if previously registered
+   * Has this been registered already.
+   *
+   * @var bool
    */
   protected $_registered;
 
   /**
+   * Class constructor.
    */
   protected function __construct() {
     $this->_registered = FALSE;
@@ -202,6 +205,12 @@ class CRM_Core_ClassLoader {
    * @param $class
    */
   public function loadClass($class) {
+    if ($class === 'CiviCRM_API3_Exception') {
+      //call internal error class api/Exception first
+      // allow api/Exception class call external error class
+      // CiviCRM_API3_Exception
+      require_once 'api/Exception.php';
+    }
     if (
       // Only load classes that clearly belong to CiviCRM.
       // Note: api/v3 does not use classes, but api_v3's test-suite does
