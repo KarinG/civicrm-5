@@ -4721,8 +4721,8 @@ INSERT INTO civicrm_relationship_type( name_a_b,label_a_b, name_b_a,label_b_a, d
 -- Sample Tags
 INSERT INTO civicrm_tag( name, description, parent_id,used_for )
     VALUES
-    ( 'Non-profit', 'Een not-for-profit organisatie.', NULL,'civicrm_contact'),
-    ( 'Bedrijf', 'Organisatie met winst oogmerk', NULL,'civicrm_contact'),
+    ( 'Non-profit', 'Een organisatie zonder winstoogmerk.', NULL,'civicrm_contact'),
+    ( 'Bedrijf', 'Organisatie met winstoogmerk.', NULL,'civicrm_contact'),
     ( 'Overheidsorganisatie', 'Een overheidsorganisatie', NULL,'civicrm_contact'),
     ( 'Belangrijk donateur', 'Hooggewaardeerde supporter van onze organisatie.', NULL,'civicrm_contact'),
     ( 'Vrijwilliger', 'Actieve vrijwilligers', NULL,'civicrm_contact' );
@@ -4732,14 +4732,14 @@ INSERT INTO civicrm_tag( name, description, parent_id,used_for )
 INSERT INTO civicrm_mailing_component
     (name,component_type,subject,body_html,body_text,is_default,is_active)
 VALUES
-    ('Kop van mailing','Header','Beschrijvende titel voor deze kop','Voorbeeld Kop voor inhoud op basis van HTML.','Voorbeeld Kop voor inhoud op basis van platte tekst.',1,1),
+    ('Koptekst van mailing','Header','Beschrijvende titel voor deze kop','Voorbeeld Kop voor inhoud op basis van HTML.','Voorbeeld Kop voor inhoud op basis van platte tekst.',1,1),
     ('Voettekst voor mailing','Footer','Beschrijvende titel voor deze voettekst.','Sample Footer for HTML formatted content<br/><a href=\"{action.optOutUrl}\">Unsubscribe</a>  <br/> {domain.address}','to unsubscribe: {action.optOutUrl}\n{domain.address}',1,1),
     ('Inschrijfbericht','Subscribe','Verzoek bevestigen aanmelding','Uw aanvraag voor de {subscribe.group} mailinglijst heeft status \"in afwachting\". U kunt uw aanvraag bevestigen door deze mail te beantwoorden of door <a href=\"{subscribe.url}\">hier</a> te klikken.','Uw aanvraag voor de {subscribe.group} mailinglijst heeft status \"in afwachting\". U kunt uw aanvraag bevestigen door deze mail te beantwoorden of op deze link te klikken: {subscribe.url}.',1,1),
     ('Welkomstbericht','Welcome','Uw inschrijving is geactiveerd','Welkom. Uw inschrijving voor de {welcome.group} mailinglijst is geactiveerd.','Welkom. Uw inschrijving voor de {welcome.group} mailinglijst is geactiveerd.',1,1),
     ('Bericht bij afmelding','Unsubscribe','Bevestiging uitschrijving','U bent uitgeschreven bij de volgende groepen: {unsubscribe.group}. U kunt zich opnieuw inschrijven door naar dit adres {action.resubscribe} te mailen of <a href=\"{action.resubscribeUrl}\">hier</a> te klikken.','U bent uitgeschreven bij de volgende groepen: {unsubscribe.group}. U kunt zich opnieuw inschrijven door naar dit adres {action.resubscribe} te mailen of hier te klikken .',1,1),
     ('Bericht opnieuw aangemeld','Resubscribe','Bevestiging herinschrijving','U ben opnieuw ingeschreven in de volgende groepen: {resubscribe.group}. U kunt zich uitschrijven door te mailen aan {action.unsubscribe} of <a href=\"{action.unsubscribeUrl}\">hier</a> te klikken.','U ben opnieuw ingeschreven in de volgende groepen: {resubscribe.group}. U kunt zich uitschrijven door te mailen aan {action.unsubscribe} of of hierop te klikken {action.unsubscribeUrl}.',1,1),
-    ('Bericht bij uitschrijven','OptOut','Bevestiging uitschrijving','Uw e-mailadres is niet verwijderd van de {domain.name} mailinglijst.','Uw e-mailadres is niet verwijderd van de {domain.name} mailinglijst.',1,1),
-    ('Automatische beantwoorder','Reply','U kunt een mail sturen aan ons algemene mail adres.','Dit is een automatisch antwoord van een e-mailbox die wij niet volgen. U kunt een mail sturen aan ons algemene e-mailadres zoals dat op onze website is aangegeven.','Dit is een automatisch antwoord van een e-mailbox die wij niet volgen. U kunt een mail sturen aan ons algemene e-mailadres zoals dat op onze website is aangegeven.',1,1);
+    ('Bericht bij uitschrijven','OptOut','Bevestiging uitschrijving','Uw e-mailadres is verwijderd van de {domain.name} mailinglijst.','Uw e-mailadres is verwijderd van de {domain.name} mailinglijst.',1,1),
+    ('Automatische beantwoorder','Reply','U kunt een e-mail sturen naar ons algemene e-mailadres.','Dit is een automatisch antwoord van een e-mailbox die wij niet volgen. U kunt een e-mail sturen naar ons  algemene e-mailadres zoals dat op onze website is aangegeven.','Dit is een automatisch antwoord van een e-mailbox die wij niet volgen. U kunt een e-mail sturen naar ons  algemene e-mailadres zoals dat op onze website is aangegeven.',1,1);
 
 
 -- contribution types
@@ -4756,7 +4756,7 @@ VALUES
 INSERT INTO
    `civicrm_option_group` (`name`, `title`, `data_type`, `is_reserved`, `is_active`, `is_locked`)
 VALUES
-   ('preferred_communication_method', 'Voorkeur communicatiemiddel'     , NULL, 1, 1, 0),
+   ('preferred_communication_method', 'Voorkeur communicatie'     , NULL, 1, 1, 0),
    ('activity_type'                 , 'Type activiteit'                      , 'Integer', 1, 1, 0),
    ('gender'                        , 'Geslacht'                             , 'Integer', 1, 1, 0),
    ('instant_messenger_service'     , 'Instant Messenger (IM)-accounts', NULL, 1, 1, 0),
@@ -4769,7 +4769,7 @@ VALUES
    ('contribution_status'           , 'Bijdragestatus'                , NULL, 1, 1, 1),
    ('pcp_status'                    , 'PCP Status'                         , NULL, 1, 1, 1),
    ('pcp_owner_notify'              , 'PCP eigenaar notificaties'            , NULL, 1, 1, 1),
-   ('participant_role'              , 'Rol van deelnemers'                   , 'Integer', 1, 1, 0),
+   ('participant_role'              , 'Rol van deelnemer'                   , 'Integer', 1, 1, 0),
    ('event_type'                    , 'Evenementstype'                         , 'Integer', 1, 1, 0),
    ('contact_view_options'          , 'Opties contact tonen'               , NULL, 1, 1, 1),
    ('contact_smart_group_display'   , 'Opties tonen contacten smartgroep'   , NULL, 1, 1, 1),
@@ -5074,12 +5074,12 @@ VALUES
   (@option_group_id_cs, 'Terugboeking', 10, 'Chargeback', NULL, 0, NULL, 10, NULL, 0, 1, 1, NULL, NULL, NULL),
 
   (@option_group_id_pcp, 'Ter goedkeuring', 1, 'Waiting Review', NULL, 0, NULL, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
-  (@option_group_id_pcp, 'Goed gekeurd'      , 2, 'Approved'      , NULL, 0, NULL, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
-  (@option_group_id_pcp, 'Niet goed gekeurd'  , 3, 'Not Approved'  , NULL, 0, NULL, 3, NULL, 0, 1, 1, NULL, NULL, NULL),
+  (@option_group_id_pcp, 'Goedgekeurd'      , 2, 'Approved'      , NULL, 0, NULL, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
+  (@option_group_id_pcp, 'Niet goedgekeurd'  , 3, 'Not Approved'  , NULL, 0, NULL, 3, NULL, 0, 1, 1, NULL, NULL, NULL),
 
   (@option_group_id_pcpOwnerNotify, 'Eigenaar kiest of hij/zij notificaties wil ontvangen', 1, 'owner_chooses', NULL, 0, 1, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_pcpOwnerNotify, 'Er worden naar alle eigenaren notificaties verzonden'      , 2, 'all_owners'      , NULL, 0, 0, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
-  (@option_group_id_pcpOwnerNotify, 'Er zijn geen notificaties beschikbaar'  , 3, 'no_notifications'  , NULL, 0, 0, 3, NULL, 0, 1, 1, NULL, NULL, NULL),
+  (@option_group_id_pcpOwnerNotify, 'GEEN notificaties'  , 3, 'no_notifications'  , NULL, 0, 0, 3, NULL, 0, 1, 1, NULL, NULL, NULL),
 
   (@option_group_id_pRole, 'Deelnemer',  1, 'Attendee',  NULL, 1, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_pRole, 'Vrijwilliger', 2, 'Volunteer', NULL, 1, NULL, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5179,7 +5179,7 @@ VALUES
   (@option_group_id_adOpt, 'Straat en huisnummer'    ,  1, 'street_address', NULL, 0, NULL,  1, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Aanvullend adres 1'  ,  2, 'supplemental_address_1', NULL, 0, NULL,  2, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Aanvullend adres 2'  ,  3, 'supplemental_address_2', NULL, 0, NULL,  3, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_adOpt, 'Extra straat en huisnummer 3'  ,  4, 'supplemental_address_3', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_adOpt, 'Aanvullend adres 3'  ,  4, 'supplemental_address_3', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Plaats'              ,  5, 'city'          , NULL, 0, NULL,  5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Postcode' ,  6, 'postal_code'   , NULL, 0, NULL,  6, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Toevoeging postcode',  7, 'postal_code_suffix', NULL, 0, NULL,  7, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5207,7 +5207,7 @@ VALUES
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Basic'                , 3, 'CRM_Contact_Form_Search_Custom_Basic'       , NULL, 0, NULL, 3, 'Eenvoudig zoeken', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Group'                , 4, 'CRM_Contact_Form_Search_Custom_Group'       , NULL, 0, NULL, 4, 'Inclusief / exclusief zoeken', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_PostalMailing'        , 5, 'CRM_Contact_Form_Search_Custom_PostalMailing', NULL, 0, NULL, 5, 'Post', 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Proximity'            , 6, 'CRM_Contact_Form_Search_Custom_Proximity', NULL, 0, NULL, 6, 'Zoeken in omgeving', 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Proximity'            , 6, 'CRM_Contact_Form_Search_Custom_Proximity', NULL, 0, NULL, 6, 'Zoeken op nabijheid', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_EventAggregate'       , 7, 'CRM_Contact_Form_Search_Custom_EventAggregate', NULL, 0, NULL, 7, 'Gemiddelde per evenement', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_ActivitySearch'       , 8, 'CRM_Contact_Form_Search_Custom_ActivitySearch', NULL, 0, NULL, 8, 'Activiteiten zoeken', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_PriceSet'             , 9, 'CRM_Contact_Form_Search_Custom_PriceSet', NULL, 0, NULL, 9, 'Prijsset details voor evenement deelnemers', 0, 0, 1, NULL, NULL, NULL),
@@ -5272,7 +5272,7 @@ VALUES
   (@option_group_id_acs, 'Ingepland',    1, 'Scheduled',    NULL, 0, 1,    1, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_acs, 'Gereed',    2, 'Completed',    NULL, 1, NULL, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_acs, 'Geannuleerd',    3, 'Cancelled',    NULL, 2, NULL, 3, NULL, 0, 1, 1, NULL, NULL, NULL),
-  (@option_group_id_acs, 'Bericht achter gelaten', 4, 'Left Message', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_acs, 'Achtergelaten bericht', 4, 'Left Message', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acs, 'Niet bereikbaar',  5, 'Unreachable',  NULL, 2, NULL, 5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acs, 'Niet vereist', 6, 'Not Required', NULL, 2, NULL, 6, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acs, 'Beschikbaar',    7, 'Available',    NULL, 0, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5518,7 +5518,7 @@ VALUES
      (@option_group_id_arel, 'Uitgestelde opbrengstenrekening is', 12, 'Deferred Revenue Account is', NULL, 0, 0, 12, 'Deferred Revenue Account is', 0, 1, 1, 2, NULL, NULL),
 
 -- event_contacts
-   (@option_group_id_ere, 'Rol van deelnemers', 1, 'participant_role', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_ere, 'Rol van deelnemer', 1, 'participant_role', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
 
 -- default conference slots
    (@option_group_id_conference_slot, 'Ochtend sessies', 1, 'Morning Sessions', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5731,7 +5731,7 @@ VALUES
   (@option_group_id_grantTyp, 'straffeloosheid'           , 4, 'Impunity'          , NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, @domainID, NULL),
 
 -- Mail Approval Status Preferences
-  (@option_group_id_mail_approval_status, 'Goed gekeurd' , 1, 'Approved', NULL, 0, 1, 1, NULL, 0, 1, 1, @mailCompId, @domainID, NULL),
+  (@option_group_id_mail_approval_status, 'Goedgekeurd' , 1, 'Approved', NULL, 0, 1, 1, NULL, 0, 1, 1, @mailCompId, @domainID, NULL),
   (@option_group_id_mail_approval_status, 'Geweigerd' , 2, 'Rejected', NULL, 0, 0, 2, NULL, 0, 1, 1, @mailCompId, @domainID, NULL),
   (@option_group_id_mail_approval_status, 'Geen' , 3, 'None', NULL, 0, 0, 3, NULL, 0, 1, 1, @mailCompId, @domainID, NULL),
 
@@ -6181,7 +6181,7 @@ INSERT INTO civicrm_mailing_bounce_pattern
 
 INSERT INTO civicrm_mailing_bounce_type
         (name, description, hold_threshold)
-        VALUES ('Invalid', 'Mailadres is niet geldig', 1);
+        VALUES ('Invalid', 'E-mailadres is niet geldig', 1);
 
 SELECT @bounceTypeID := max(id) FROM civicrm_mailing_bounce_type WHERE name = 'Invalid';
 INSERT INTO civicrm_mailing_bounce_pattern
@@ -6360,9 +6360,9 @@ INSERT INTO civicrm_uf_group
     (1,  'name_and_address',   'Individual,Contact',  'Naam en adres',   0,           0,           NULL),
     (2,  'supporter_profile',  'Individual,Contact',  'Supporter profiel',  2,           0,           '<p><strong>Uw gegevens worden niet gedeeld met andere organisaties.</strong></p><p>Dank voor uw ondersteuning in deze campagne!</p>'),
     (3,  'participant_status', 'Participant',         'Status deelnemer',             0,      1,           NULL),
-    (4,  'new_individual',     'Individual,Contact',  'Nieuwe persoon'    ,             0,      1,           NULL),
-    (5,  'new_organization',   'Organization,Contact','Nieuwe organisatie'  ,             0,      1,           NULL),
-    (6,  'new_household',      'Household,Contact',   'Nieuw huishouden'     ,             0,      1,           NULL),
+    (4,  'new_individual',     'Individual,Contact',  'Persoon toevoegen'    ,             0,      1,           NULL),
+    (5,  'new_organization',   'Organization,Contact','Organisatie toevoegen'  ,             0,      1,           NULL),
+    (6,  'new_household',      'Household,Contact',   'Huishouden toevoegen'     ,             0,      1,           NULL),
     (7,  'summary_overlay',    'Contact',             'Overzicht'   ,             0,      1,           NULL),
     (8,  'shared_address',     'Contact',             'Gedeeld adres'                , 0,      1,           NULL),
     (9,  'on_behalf_organization', 'Contact,Organization','Namens organisatie',  0,      1,           NULL),
@@ -6539,7 +6539,7 @@ INSERT INTO civicrm_option_group
 
 INSERT INTO civicrm_option_value
   (option_group_id,        name,       label,   value,                                  weight) VALUES
-      (@tpl_ogid_case, 'case_activity', 'Dossiers - Stuur kopie van een activiteit',            1, 1) ,      (@tpl_ogid_contribution, 'contribution_dupalert', 'Contributies - Dubbele organisatie waarschuwing',            1, 1) ,      (@tpl_ogid_contribution, 'contribution_offline_receipt', 'Contributies - Factuur (off-line)',            2, 2) ,      (@tpl_ogid_contribution, 'contribution_online_receipt', 'Bijdragen - ontvangstbewijs (online)',            3, 3) ,      (@tpl_ogid_contribution, 'contribution_invoice_receipt', 'Bijdragen - factuur',            4, 4) ,      (@tpl_ogid_contribution, 'contribution_recurring_notify', 'Bijdragen - notificatie begin en eind periodieke bijdragen',            5, 5) ,      (@tpl_ogid_contribution, 'contribution_recurring_cancelled', 'Bijdragen - bevestiging stoppen periodieke bijdrage',            6, 6) ,      (@tpl_ogid_contribution, 'contribution_recurring_billing', 'Bijdragen - wijzigingen periodieke betalingen',            7, 7) ,      (@tpl_ogid_contribution, 'contribution_recurring_edit', 'Bijdragen - periodieke wijzigingen',            8, 8) ,      (@tpl_ogid_contribution, 'pcp_notify', 'Persoonlijke campagne pagina\'s - notificatie beheerder',            9, 9) ,      (@tpl_ogid_contribution, 'pcp_status_change', 'Persoonlijke campagnepagina\'s - Notificatie statuswijziging supporter ',            10, 10) ,      (@tpl_ogid_contribution, 'pcp_supporter_notify', 'Persoonlijke campagne pagina\'s - Welkom supporter',            11, 11) ,      (@tpl_ogid_contribution, 'pcp_owner_notify', 'Persoonlijke campagnepagina\'s - Eigenaar notificatie',            12, 12) ,      (@tpl_ogid_contribution, 'payment_or_refund_notification', 'Aanvullende notificatie voor ontvangst betaling of terugbetaling',            13, 13) ,      (@tpl_ogid_event, 'event_offline_receipt', 'Evenementen - Bevestiging inschrijving en ontvangstbewijs (offline)',            1, 1) ,      (@tpl_ogid_event, 'event_online_receipt', 'Evenementen - Bevestiging inschrijving en ontvangstbewijs (online)',            2, 2) ,      (@tpl_ogid_event, 'event_registration_receipt', 'Evenementen - alleen ontvangstbewijs',            3, 3) ,      (@tpl_ogid_event, 'participant_cancelled', 'Evenementen - Annulering inschrijving',            4, 4) ,      (@tpl_ogid_event, 'participant_confirm', 'Evenementen - Bevestiging inschrijving en uitnodiging',            5, 5) ,      (@tpl_ogid_event, 'participant_expired', 'Evenementen - In afwachting van verloop registratie bericht',            6, 6) ,      (@tpl_ogid_event, 'participant_transferred', 'Evenementen - notificatie inschrijving overgedragen',            7, 7) ,      (@tpl_ogid_friend, 'friend', 'Informeer-een-vriend mail',            1, 1) ,      (@tpl_ogid_membership, 'membership_offline_receipt', 'Lidmaatschap - Inschrijf en vernieuw bewijs (off-line)',            1, 1) ,      (@tpl_ogid_membership, 'membership_online_receipt', 'Lidmaatschap - ontvangstbewijs (on-line)',            2, 2) ,      (@tpl_ogid_membership, 'membership_autorenew_cancelled', 'Lidmaatschappen - automatisch vernieuwen kennisgeving annulering',            3, 3) ,      (@tpl_ogid_membership, 'membership_autorenew_billing', 'Lidmaatschappen - automatisch vernieuwen facturatie updates',            4, 4) ,      (@tpl_ogid_meta, 'test_preview', 'Test - Ontvangst Kop',            1, 1) ,      (@tpl_ogid_pledge, 'pledge_acknowledge', 'Toezeggingen - bevestiging',            1, 1) ,      (@tpl_ogid_pledge, 'pledge_reminder', 'Toezeggingen - betalingsherinnering',            2, 2) ,      (@tpl_ogid_uf, 'uf_notify', 'Profiel - Notificatie beheerder',            1, 1) ,      (@tpl_ogid_petition, 'petition_sign', 'Petitie - handtekening toegevoegd',            1, 1) ,      (@tpl_ogid_petition, 'petition_confirmation_needed', 'Petitie - in afwachting van verificatie',            2, 2) ;
+      (@tpl_ogid_case, 'case_activity', 'Dossiers - Stuur kopie van een activiteit',            1, 1) ,      (@tpl_ogid_contribution, 'contribution_dupalert', 'Contributies - Dubbele organisatie waarschuwing',            1, 1) ,      (@tpl_ogid_contribution, 'contribution_offline_receipt', 'Contributies - Factuur (off-line)',            2, 2) ,      (@tpl_ogid_contribution, 'contribution_online_receipt', 'Bijdragen - ontvangstbewijs (online)',            3, 3) ,      (@tpl_ogid_contribution, 'contribution_invoice_receipt', 'Bijdragen - factuur',            4, 4) ,      (@tpl_ogid_contribution, 'contribution_recurring_notify', 'Bijdragen - notificatie begin en eind periodieke bijdragen',            5, 5) ,      (@tpl_ogid_contribution, 'contribution_recurring_cancelled', 'Bijdragen - bevestiging stoppen periodieke bijdrage',            6, 6) ,      (@tpl_ogid_contribution, 'contribution_recurring_billing', 'Bijdragen - wijzigingen periodieke betalingen',            7, 7) ,      (@tpl_ogid_contribution, 'contribution_recurring_edit', 'Bijdragen - periodieke wijzigingen',            8, 8) ,      (@tpl_ogid_contribution, 'pcp_notify', 'Persoonlijke campagnepagina\'s - notificatie beheerder',            9, 9) ,      (@tpl_ogid_contribution, 'pcp_status_change', 'Persoonlijke campagnepagina\'s - Notificatie statuswijziging supporter ',            10, 10) ,      (@tpl_ogid_contribution, 'pcp_supporter_notify', 'Persoonlijke campagnepagina\'s - Welkom supporter',            11, 11) ,      (@tpl_ogid_contribution, 'pcp_owner_notify', 'Persoonlijke campagnepagina\'s - Eigenaar notificatie',            12, 12) ,      (@tpl_ogid_contribution, 'payment_or_refund_notification', 'Aanvullende notificatie voor ontvangst betaling of terugbetaling',            13, 13) ,      (@tpl_ogid_event, 'event_offline_receipt', 'Evenementen - Bevestiging inschrijving en ontvangstbewijs (offline)',            1, 1) ,      (@tpl_ogid_event, 'event_online_receipt', 'Evenementen - Bevestiging inschrijving en ontvangstbewijs (online)',            2, 2) ,      (@tpl_ogid_event, 'event_registration_receipt', 'Evenementen - alleen ontvangstbewijs',            3, 3) ,      (@tpl_ogid_event, 'participant_cancelled', 'Evenementen - Annulering inschrijving',            4, 4) ,      (@tpl_ogid_event, 'participant_confirm', 'Evenementen - Bevestiging inschrijving en uitnodiging',            5, 5) ,      (@tpl_ogid_event, 'participant_expired', 'Evenementen - In afwachting van verloop registratie bericht',            6, 6) ,      (@tpl_ogid_event, 'participant_transferred', 'Evenementen - notificatie inschrijving overgedragen',            7, 7) ,      (@tpl_ogid_friend, 'friend', 'Informeer-een-vriend mail',            1, 1) ,      (@tpl_ogid_membership, 'membership_offline_receipt', 'Lidmaatschap - Inschrijf en vernieuw bewijs (off-line)',            1, 1) ,      (@tpl_ogid_membership, 'membership_online_receipt', 'Lidmaatschap - ontvangstbewijs (on-line)',            2, 2) ,      (@tpl_ogid_membership, 'membership_autorenew_cancelled', 'Lidmaatschappen - automatisch vernieuwen kennisgeving annulering',            3, 3) ,      (@tpl_ogid_membership, 'membership_autorenew_billing', 'Lidmaatschappen - automatisch vernieuwen facturatie updates',            4, 4) ,      (@tpl_ogid_meta, 'test_preview', 'Test - Ontvangst Kop',            1, 1) ,      (@tpl_ogid_pledge, 'pledge_acknowledge', 'Toezeggingen - bevestiging',            1, 1) ,      (@tpl_ogid_pledge, 'pledge_reminder', 'Toezeggingen - betalingsherinnering',            2, 2) ,      (@tpl_ogid_uf, 'uf_notify', 'Profiel - Notificatie beheerder',            1, 1) ,      (@tpl_ogid_petition, 'petition_sign', 'Petitie - handtekening toegevoegd',            1, 1) ,      (@tpl_ogid_petition, 'petition_confirmation_needed', 'Petitie - in afwachting van verificatie',            2, 2) ;
     SELECT @tpl_ovid_case_activity := MAX(id) FROM civicrm_option_value WHERE option_group_id = @tpl_ogid_case AND name = 'case_activity';
     SELECT @tpl_ovid_contribution_dupalert := MAX(id) FROM civicrm_option_value WHERE option_group_id = @tpl_ogid_contribution AND name = 'contribution_dupalert';
     SELECT @tpl_ovid_contribution_offline_receipt := MAX(id) FROM civicrm_option_value WHERE option_group_id = @tpl_ogid_contribution AND name = 'contribution_offline_receipt';
@@ -11046,7 +11046,7 @@ INSERT INTO civicrm_msg_template
 ', @tpl_ovid_contribution_recurring_edit, 0,          1) ,      
       
       
-      ('Persoonlijke campagne pagina\'s - notificatie beheerder', '{ts}Personal Campaign Page Notification{/ts}
+      ('Persoonlijke campagnepagina\'s - notificatie beheerder', '{ts}Personal Campaign Page Notification{/ts}
 ', '===========================================================
 {ts}Personal Campaign Page Notification{/ts}
 
@@ -11164,7 +11164,7 @@ INSERT INTO civicrm_msg_template
 </body>
 </html>
 ', @tpl_ovid_pcp_notify, 1,          0),
-      ('Persoonlijke campagne pagina\'s - notificatie beheerder', '{ts}Personal Campaign Page Notification{/ts}
+      ('Persoonlijke campagnepagina\'s - notificatie beheerder', '{ts}Personal Campaign Page Notification{/ts}
 ', '===========================================================
 {ts}Personal Campaign Page Notification{/ts}
 
@@ -11494,7 +11494,7 @@ INSERT INTO civicrm_msg_template
 ', @tpl_ovid_pcp_status_change, 0,          1) ,      
       
       
-      ('Persoonlijke campagne pagina\'s - Welkom supporter', '{ts 1=$contribPageTitle}Your Personal Campaign Page for %1{/ts}
+      ('Persoonlijke campagnepagina\'s - Welkom supporter', '{ts 1=$contribPageTitle}Your Personal Campaign Page for %1{/ts}
 ', '{ts}Dear supporter{/ts},
 {ts 1="$contribPageTitle"}Thanks for creating a personal campaign page in support of %1.{/ts}
 
@@ -11652,7 +11652,7 @@ INSERT INTO civicrm_msg_template
 </body>
 </html>
 ', @tpl_ovid_pcp_supporter_notify, 1,          0),
-      ('Persoonlijke campagne pagina\'s - Welkom supporter', '{ts 1=$contribPageTitle}Your Personal Campaign Page for %1{/ts}
+      ('Persoonlijke campagnepagina\'s - Welkom supporter', '{ts 1=$contribPageTitle}Your Personal Campaign Page for %1{/ts}
 ', '{ts}Dear supporter{/ts},
 {ts 1="$contribPageTitle"}Thanks for creating a personal campaign page in support of %1.{/ts}
 
@@ -24051,4 +24051,4 @@ INSERT INTO `civicrm_report_instance`
     ( `domain_id`, `title`, `report_id`, `description`, `permission`, `form_values`)
 VALUES
     (  @domainID, 'Survey Details', 'survey/detail', 'Detailed report for canvassing, phone-banking, walk lists or other surveys.', 'access CiviReport', 'a:39:{s:6:"fields";a:2:{s:9:"sort_name";s:1:"1";s:6:"result";s:1:"1";}s:22:"assignee_contact_id_op";s:2:"eq";s:25:"assignee_contact_id_value";s:0:"";s:12:"sort_name_op";s:3:"has";s:15:"sort_name_value";s:0:"";s:17:"street_number_min";s:0:"";s:17:"street_number_max";s:0:"";s:16:"street_number_op";s:3:"lte";s:19:"street_number_value";s:0:"";s:14:"street_name_op";s:3:"has";s:17:"street_name_value";s:0:"";s:15:"postal_code_min";s:0:"";s:15:"postal_code_max";s:0:"";s:14:"postal_code_op";s:3:"lte";s:17:"postal_code_value";s:0:"";s:7:"city_op";s:3:"has";s:10:"city_value";s:0:"";s:20:"state_province_id_op";s:2:"in";s:23:"state_province_id_value";a:0:{}s:13:"country_id_op";s:2:"in";s:16:"country_id_value";a:0:{}s:12:"survey_id_op";s:2:"in";s:15:"survey_id_value";a:0:{}s:12:"status_id_op";s:2:"eq";s:15:"status_id_value";s:1:"1";s:11:"custom_1_op";s:2:"in";s:14:"custom_1_value";a:0:{}s:11:"custom_2_op";s:2:"in";s:14:"custom_2_value";a:0:{}s:17:"custom_3_relative";s:1:"0";s:13:"custom_3_from";s:0:"";s:11:"custom_3_to";s:0:"";s:11:"description";s:75:"Detailed report for canvassing, phone-banking, walk lists or other surveys.";s:13:"email_subject";s:0:"";s:8:"email_to";s:0:"";s:8:"email_cc";s:0:"";s:10:"permission";s:17:"access CiviReport";s:6:"groups";s:0:"";s:9:"domain_id";i:1;}');
-UPDATE civicrm_domain SET version = '5.19.1';
+UPDATE civicrm_domain SET version = '5.19.2';
