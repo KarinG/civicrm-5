@@ -1,25 +1,9 @@
 -- +--------------------------------------------------------------------+
--- | CiviCRM version 5                                                  |
--- +--------------------------------------------------------------------+
--- | Copyright CiviCRM LLC (c) 2004-2019                                |
--- +--------------------------------------------------------------------+
--- | This file is a part of CiviCRM.                                    |
+-- | Copyright CiviCRM LLC. All rights reserved.                        |
 -- |                                                                    |
--- | CiviCRM is free software; you can copy, modify, and distribute it  |
--- | under the terms of the GNU Affero General Public License           |
--- | Version 3, 19 November 2007 and the CiviCRM Licensing Exception.   |
--- |                                                                    |
--- | CiviCRM is distributed in the hope that it will be useful, but     |
--- | WITHOUT ANY WARRANTY; without even the implied warranty of         |
--- | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.               |
--- | See the GNU Affero General Public License for more details.        |
--- |                                                                    |
--- | You should have received a copy of the GNU Affero General Public   |
--- | License and the CiviCRM Licensing Exception along                  |
--- | with this program; if not, contact CiviCRM LLC                     |
--- | at info[AT]civicrm[DOT]org. If you have questions about the        |
--- | GNU Affero General Public License or the licensing of CiviCRM,     |
--- | see the CiviCRM license FAQ at http://civicrm.org/licensing        |
+-- | This work is published under the GNU AGPLv3 license with some      |
+-- | permitted exceptions and without any warranty. For full license    |
+-- | and copyright information, see https://civicrm.org/licensing       |
 -- +--------------------------------------------------------------------+
 --
 -- Generated from civicrm_country.tpl
@@ -169,7 +153,7 @@ INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1125", "Lithuania", "LT", "1", "0");
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1126", "Luxembourg", "LU", "1", "0");
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1127", "Macao", "MO", "4", "0");
-INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1128", "Macedonia, Republic of", "MK", "1", "0");
+INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1128", "North Macedonia", "MK", "1", "0");
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1129", "Madagascar", "MG", "5", "0");
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1130", "Malawi", "MW", "5", "0");
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1131", "Malaysia", "MY", "4", "0");
@@ -295,27 +279,11 @@ INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1252", "Saint Barthélemy", "BL", "2", "0");
 INSERT INTO civicrm_country (id, name,iso_code,region_id,is_province_abbreviated) VALUES("1253", "Saint Martin (French part)", "MF", "2", "0");
 -- +--------------------------------------------------------------------+
--- | CiviCRM version 5                                                  |
--- +--------------------------------------------------------------------+
--- | Copyright CiviCRM LLC (c) 2004-2019                                |
--- +--------------------------------------------------------------------+
--- | This file is a part of CiviCRM.                                    |
+-- | Copyright CiviCRM LLC. All rights reserved.                        |
 -- |                                                                    |
--- | CiviCRM is free software; you can copy, modify, and distribute it  |
--- | under the terms of the GNU Affero General Public License           |
--- | Version 3, 19 November 2007 and the CiviCRM Licensing Exception.   |
--- |                                                                    |
--- | CiviCRM is distributed in the hope that it will be useful, but     |
--- | WITHOUT ANY WARRANTY; without even the implied warranty of         |
--- | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.               |
--- | See the GNU Affero General Public License for more details.        |
--- |                                                                    |
--- | You should have received a copy of the GNU Affero General Public   |
--- | License and the CiviCRM Licensing Exception along                  |
--- | with this program; if not, contact CiviCRM LLC                     |
--- | at info[AT]civicrm[DOT]org. If you have questions about the        |
--- | GNU Affero General Public License or the licensing of CiviCRM,     |
--- | see the CiviCRM license FAQ at http://civicrm.org/licensing        |
+-- | This work is published under the GNU AGPLv3 license with some      |
+-- | permitted exceptions and without any warranty. For full license    |
+-- | and copyright information, see https://civicrm.org/licensing       |
 -- +--------------------------------------------------------------------+
 --
 -- Generated from civicrm_state_province.tpl
@@ -4421,27 +4389,11 @@ INSERT INTO civicrm_state_province (id, country_id, abbreviation, name) VALUES
 -- dev/Core#131 Missing UK State
 (NULL, 1226, "MON", "Monmouthshire");
 -- +--------------------------------------------------------------------+
--- | CiviCRM version 5                                                  |
--- +--------------------------------------------------------------------+
--- | Copyright CiviCRM LLC (c) 2004-2019                                |
--- +--------------------------------------------------------------------+
--- | This file is a part of CiviCRM.                                    |
+-- | Copyright CiviCRM LLC. All rights reserved.                        |
 -- |                                                                    |
--- | CiviCRM is free software; you can copy, modify, and distribute it  |
--- | under the terms of the GNU Affero General Public License           |
--- | Version 3, 19 November 2007 and the CiviCRM Licensing Exception.   |
--- |                                                                    |
--- | CiviCRM is distributed in the hope that it will be useful, but     |
--- | WITHOUT ANY WARRANTY; without even the implied warranty of         |
--- | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.               |
--- | See the GNU Affero General Public License for more details.        |
--- |                                                                    |
--- | You should have received a copy of the GNU Affero General Public   |
--- | License and the CiviCRM Licensing Exception along                  |
--- | with this program; if not, contact CiviCRM LLC                     |
--- | at info[AT]civicrm[DOT]org. If you have questions about the        |
--- | GNU Affero General Public License or the licensing of CiviCRM,     |
--- | see the CiviCRM license FAQ at http://civicrm.org/licensing        |
+-- | This work is published under the GNU AGPLv3 license with some      |
+-- | permitted exceptions and without any warranty. For full license    |
+-- | and copyright information, see https://civicrm.org/licensing       |
 -- +--------------------------------------------------------------------+
 --
 -- Generated from civicrm_currency.tpl
@@ -4634,27 +4586,11 @@ INSERT INTO civicrm_currency (id, name, symbol, numeric_code, full_name) VALUES
 (184, "ZMK", NULL, "894", "Zambian Kwacha"),
 (185, "ZWD", "Z$", "716", "Zimbabwe Dollar");
 -- +--------------------------------------------------------------------+
--- | CiviCRM version 5                                                  |
--- +--------------------------------------------------------------------+
--- | Copyright CiviCRM LLC (c) 2004-2019                                |
--- +--------------------------------------------------------------------+
--- | This file is a part of CiviCRM.                                    |
+-- | Copyright CiviCRM LLC. All rights reserved.                        |
 -- |                                                                    |
--- | CiviCRM is free software; you can copy, modify, and distribute it  |
--- | under the terms of the GNU Affero General Public License           |
--- | Version 3, 19 November 2007 and the CiviCRM Licensing Exception.   |
--- |                                                                    |
--- | CiviCRM is distributed in the hope that it will be useful, but     |
--- | WITHOUT ANY WARRANTY; without even the implied warranty of         |
--- | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.               |
--- | See the GNU Affero General Public License for more details.        |
--- |                                                                    |
--- | You should have received a copy of the GNU Affero General Public   |
--- | License and the CiviCRM Licensing Exception along                  |
--- | with this program; if not, contact CiviCRM LLC                     |
--- | at info[AT]civicrm[DOT]org. If you have questions about the        |
--- | GNU Affero General Public License or the licensing of CiviCRM,     |
--- | see the CiviCRM license FAQ at http://civicrm.org/licensing        |
+-- | This work is published under the GNU AGPLv3 license with some      |
+-- | permitted exceptions and without any warranty. For full license    |
+-- | and copyright information, see https://civicrm.org/licensing       |
 -- +--------------------------------------------------------------------+
 --
 -- Generated from civicrm_data.tpl
@@ -4757,20 +4693,20 @@ INSERT INTO
    `civicrm_option_group` (`name`, `title`, `data_type`, `is_reserved`, `is_active`, `is_locked`)
 VALUES
    ('preferred_communication_method', 'Preferred Communication Method'     , NULL, 1, 1, 0),
-   ('activity_type'                 , 'Activity Type'                      , 'Integer', 1, 1, 0),
-   ('gender'                        , 'Gender'                             , 'Integer', 1, 1, 0),
+   ('activity_type'                 , 'Kiểu hoạt động'                      , 'Integer', 1, 1, 0),
+   ('gender'                        , 'Giới tính'                             , 'Integer', 1, 1, 0),
    ('instant_messenger_service'     , 'Instant Messenger (IM) screen-names', NULL, 1, 1, 0),
    ('mobile_provider'               , 'Mobile Phone Providers'             , NULL, 1, 1, 0),
    ('individual_prefix'             , 'Individual contact prefixes'        , NULL, 1, 1, 0),
    ('individual_suffix'             , 'Individual contact suffixes'        , NULL, 1, 1, 0),
-   ('acl_role'                      , 'ACL Role'                           , NULL, 1, 1, 0),
+   ('acl_role'                      , 'Vai trò ACL'                           , NULL, 1, 1, 0),
    ('accept_creditcard'             , 'Accepted Credit Cards'              , NULL, 1, 1, 0),
    ('payment_instrument'            , 'Payment Methods'                    , 'Integer', 1, 1, 0),
    ('contribution_status'           , 'Contribution Status'                , NULL, 1, 1, 1),
    ('pcp_status'                    , 'PCP Status'                         , NULL, 1, 1, 1),
    ('pcp_owner_notify'              , 'PCP owner notifications'            , NULL, 1, 1, 1),
    ('participant_role'              , 'Participant Role'                   , 'Integer', 1, 1, 0),
-   ('event_type'                    , 'Event Type'                         , 'Integer', 1, 1, 0),
+   ('event_type'                    , 'Kiểu sự kiện'                         , 'Integer', 1, 1, 0),
    ('contact_view_options'          , 'Contact View Options'               , NULL, 1, 1, 1),
    ('contact_smart_group_display'   , 'Contact Smart Group View Options'   , NULL, 1, 1, 1),
    ('contact_edit_options'          , 'Contact Edit Options'               , NULL, 1, 1, 1),
@@ -4781,7 +4717,7 @@ VALUES
    ('grant_status'                  , 'Grant status'                       , NULL, 1, 1, 0),
    ('grant_type'                    , 'Grant Type'                         , NULL, 1, 1, 0),
    ('custom_search'                 , 'Custom Search'                      , NULL, 1, 1, 0),
-   ('activity_status'               , 'Activity Status'                    , 'Integer', 1, 1, 0),
+   ('activity_status'               , 'Tình trạng hoạt động'                    , 'Integer', 1, 1, 0),
    ('case_type'                     , 'Case Type'                          , NULL, 1, 1, 0),
    ('case_status'                   , 'Case Status'                        , NULL, 1, 1, 0),
    ('participant_listing'           , 'Participant Listing'                , NULL, 1, 1, 0),
@@ -4936,20 +4872,20 @@ INSERT INTO
    `civicrm_option_value` (`option_group_id`, `label`, `value`, `name`, `grouping`, `filter`, `is_default`, `weight`, `description`, `is_optgroup`, `is_reserved`, `is_active`, `component_id`, `visibility_id`, `icon`)
 VALUES
    (@option_group_id_pcm, 'Phone',       1, 'Phone', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
-   (@option_group_id_pcm, 'Email',       2, 'Email', NULL, 0, NULL, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
+   (@option_group_id_pcm, 'Thư điện tử',       2, 'Email', NULL, 0, NULL, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_pcm, 'Postal Mail', 3, 'Postal Mail', NULL, 0, NULL, 3, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_pcm, 'SMS',         4, 'SMS', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
    (@option_group_id_pcm, 'Fax',         5, 'Fax', NULL, 0, NULL, 5, NULL, 0, 0, 1, NULL, NULL, NULL),
 
    (@option_group_id_act, 'Meeting',                1,  'Meeting',               NULL, 0, NULL, 1,  NULL,                                                                                         0, 1, 1, NULL, NULL, 'fa-slideshare'),
    (@option_group_id_act, 'Phone Call',             2,  'Phone Call',            NULL, 0, NULL, 2,  NULL,                                                                                         0, 1, 1, NULL, NULL, 'fa-phone'),
-   (@option_group_id_act, 'Email',                  3,  'Email',                 NULL, 1, NULL, 3,  'Email sent.',                                                          0, 1, 1, NULL, NULL, 'fa-envelope-o'),
+   (@option_group_id_act, 'Thư điện tử',                  3,  'Email',                 NULL, 1, NULL, 3,  'Email sent.',                                                          0, 1, 1, NULL, NULL, 'fa-envelope-o'),
    (@option_group_id_act, 'Outbound SMS',           4,  'SMS',                   NULL, 1, NULL, 4,  'Text message (SMS) sent.',                                             0, 1, 1, NULL, NULL, 'fa-mobile'),
    (@option_group_id_act, 'Event Registration',     5,  'Event Registration',    NULL, 1, NULL, 5,  'Online or offline event registration.',                                0, 1, 1, @eventCompId, NULL, NULL),
    (@option_group_id_act, 'Contribution',           6,  'Contribution',          NULL, 1, NULL, 6,  'Online or offline contribution.',                                      0, 1, 1, @contributeCompId, NULL, NULL),
    (@option_group_id_act, 'Membership Signup',      7,  'Membership Signup',     NULL, 1, NULL, 7,  'Online or offline membership signup.',                                 0, 1, 1, @memberCompId, NULL, NULL),
    (@option_group_id_act, 'Membership Renewal',     8,  'Membership Renewal',    NULL, 1, NULL, 8,  'Online or offline membership renewal.',                                0, 1, 1, @memberCompId, NULL, NULL),
-   (@option_group_id_act, 'Tell a Friend',          9,  'Tell a Friend',         NULL, 1, NULL, 9,  'Send information about a contribution campaign or event to a friend.', 0, 1, 1, NULL, NULL, NULL),
+   (@option_group_id_act, 'Giới thiệu tới người khác',          9,  'Tell a Friend',         NULL, 1, NULL, 9,  'Send information about a contribution campaign or event to a friend.', 0, 1, 1, NULL, NULL, NULL),
    (@option_group_id_act, 'Pledge Acknowledgment',  10, 'Pledge Acknowledgment', NULL, 1, NULL, 10, 'Send Pledge Acknowledgment.',                                          0, 1, 1, @pledgeCompId, NULL, NULL),
    (@option_group_id_act, 'Pledge Reminder',        11, 'Pledge Reminder',       NULL, 1, NULL, 11, 'Send Pledge Reminder.',                                                0, 1, 1, @pledgeCompId, NULL, NULL),
    (@option_group_id_act, 'Inbound Email',          12, 'Inbound Email',         NULL, 1, NULL, 12, 'Inbound Email.',                                                       0, 1, 1, NULL, NULL, NULL),
@@ -5096,15 +5032,15 @@ VALUES
 
 -- note that these are not ts'ed since they are used for logic in most cases and not display
 -- they are used for display only in the prefernces field settings
-  (@option_group_id_cvOpt, 'Activities'   ,   1, 'activity', NULL, 0, NULL,  1,  NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_cvOpt, 'Hoạt động'   ,   1, 'activity', NULL, 0, NULL,  1,  NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Relationships',   2, 'rel', NULL, 0, NULL,  2,  NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_cvOpt, 'Groups'       ,   3, 'group', NULL, 0, NULL,  3,  NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_cvOpt, 'Các nhóm'       ,   3, 'group', NULL, 0, NULL,  3,  NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Notes'        ,   4, 'note', NULL, 0, NULL,  4,  NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Tags'         ,   5, 'tag', NULL, 0, NULL,  5,  NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Change Log'   ,   6, 'log', NULL, 0, NULL,  6,  NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_cvOpt, 'Contributions',   7, 'CiviContribute', NULL, 0, NULL,  7,  NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_cvOpt, 'Các Đóng góp',   7, 'CiviContribute', NULL, 0, NULL,  7,  NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Memberships'  ,   8, 'CiviMember', NULL, 0, NULL,  8,  NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_cvOpt, 'Events'       ,   9, 'CiviEvent', NULL, 0, NULL,  9,  NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_cvOpt, 'Sự kiện'       ,   9, 'CiviEvent', NULL, 0, NULL,  9,  NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Cases'        ,  10, 'CiviCase', NULL, 0, NULL,  10, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Grants'       ,  11, 'CiviGrant', NULL, 0, NULL,  11, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_cvOpt, 'Pledges'      ,  13, 'CiviPledge', NULL, 0, NULL,  13, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5115,46 +5051,46 @@ VALUES
   (@option_group_id_csgOpt, 'Always Show Smart Groups',   2, 'alwaysshow', NULL, 0, NULL,  2,  NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csgOpt, 'Hide Smart Groups'       ,   3, 'hide', NULL, 0, NULL,  3,  NULL, 0, 0, 1, NULL, NULL, NULL),
 
-  (@option_group_id_ceOpt, 'Custom Data'              ,   1, 'CustomData', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_ceOpt, 'Dữ liệu tùy biến'              ,   1, 'CustomData', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Address'                  ,   2, 'Address', NULL, 0, NULL, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Communication Preferences',   3, 'CommunicationPreferences', NULL, 0, NULL, 3, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Notes'                    ,   4, 'Notes', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Demographics'             ,   5, 'Demographics', NULL, 0, NULL, 5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Tags and Groups'          ,   6, 'TagsAndGroups', NULL, 0, NULL, 6, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_ceOpt, 'Email'                    ,   7, 'Email', NULL, 1, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_ceOpt, 'Thư điện tử'                    ,   7, 'Email', NULL, 1, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Phone'                    ,   8, 'Phone', NULL, 1, NULL, 8, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Instant Messenger'        ,   9, 'IM', NULL, 1, NULL, 9, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Open ID'                  ,   10, 'OpenID', NULL, 1, NULL, 10, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Website'                  ,   11, 'Website', NULL, 1, NULL, 11, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_ceOpt, 'Prefix'                   ,   12, 'Prefix', NULL, 2, NULL, 12, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_ceOpt, 'Tiền tố'                   ,   12, 'Prefix', NULL, 2, NULL, 12, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_ceOpt, 'Formal Title'             ,   13, 'Formal Title', NULL, 2, NULL, 13, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_ceOpt, 'First Name'               ,   14, 'First Name', NULL, 2, NULL, 14, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_ceOpt, 'Middle Name'              ,   15, 'Middle Name', NULL, 2, NULL, 15, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_ceOpt, 'Last Name'                ,   16, 'Last Name', NULL, 2, NULL, 16, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_ceOpt, 'Suffix'                   ,   17, 'Suffix', NULL, 2, NULL, 17, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_ceOpt, 'Họ'               ,   14, 'First Name', NULL, 2, NULL, 14, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_ceOpt, 'Tên đệm'              ,   15, 'Middle Name', NULL, 2, NULL, 15, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_ceOpt, 'Tên'                ,   16, 'Last Name', NULL, 2, NULL, 16, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_ceOpt, 'Hậu tố'                   ,   17, 'Suffix', NULL, 2, NULL, 17, NULL, 0, 0, 1, NULL, NULL, NULL),
 
-  (@option_group_id_asOpt, 'Address Fields'          ,   1, 'location', NULL, 0, NULL,  1, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_asOpt, 'Các trường địa chỉ'          ,   1, 'location', NULL, 0, NULL,  1, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Custom Fields'           ,   2, 'custom', NULL, 0, NULL,  2, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_asOpt, 'Activities'              ,   3, 'activity', NULL, 0, NULL,  4, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_asOpt, 'Hoạt động'              ,   3, 'activity', NULL, 0, NULL,  4, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Relationships'           ,   4, 'relationship', NULL, 0, NULL,  5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Notes'                   ,   5, 'notes', NULL, 0, NULL,  6, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Change Log'              ,   6, 'changeLog', NULL, 0, NULL,  7, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_asOpt, 'Contributions'           ,   7, 'CiviContribute', NULL, 0, NULL,  8, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_asOpt, 'Các Đóng góp'           ,   7, 'CiviContribute', NULL, 0, NULL,  8, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Memberships'             ,   8, 'CiviMember', NULL, 0, NULL,  9, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_asOpt, 'Events'                  ,   9, 'CiviEvent', NULL, 0, NULL, 10, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_asOpt, 'Sự kiện'                  ,   9, 'CiviEvent', NULL, 0, NULL, 10, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Cases'                   ,  10, 'CiviCase', NULL, 0, NULL, 11, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Grants'                                        ,  12, 'CiviGrant', NULL, 0, NULL, 14, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Demographics'            ,  13, 'demographics', NULL, 0, NULL, 15, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Pledges'                 ,  15, 'CiviPledge', NULL, 0, NULL, 17, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Contact Type'            ,  16, 'contactType', NULL, 0, NULL, 18, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_asOpt, 'Groups'                  ,  17, 'groups', NULL, 0, NULL, 19, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_asOpt, 'Các nhóm'                  ,  17, 'groups', NULL, 0, NULL, 19, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Tags'                    ,  18, 'tags', NULL, 0, NULL, 20, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_asOpt, 'Mailing'                 ,  19, 'CiviMail', NULL, 0, NULL, 21, NULL, 0, 0, 1, NULL, NULL, NULL),
 
-  (@option_group_id_udOpt, 'Groups'                     , 1, 'Groups', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_udOpt, 'Contributions'              , 2, 'CiviContribute', NULL, 0, NULL, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_udOpt, 'Các nhóm'                     , 1, 'Groups', NULL, 0, NULL, 1, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_udOpt, 'Các Đóng góp'              , 2, 'CiviContribute', NULL, 0, NULL, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_udOpt, 'Memberships'                , 3, 'CiviMember', NULL, 0, NULL, 3, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_udOpt, 'Events'                     , 4, 'CiviEvent', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_udOpt, 'Sự kiện'                     , 4, 'CiviEvent', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_udOpt, 'My Contacts / Organizations', 5, 'Permissioned Orgs', NULL, 0, NULL, 5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_udOpt, 'Pledges'                    , 7, 'CiviPledge', NULL, 0, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_udOpt, 'Personal Campaign Pages'    , 8, 'PCP', NULL, 0, NULL, 8, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5166,7 +5102,7 @@ VALUES
   (@option_group_id_acsOpt, 'Street Address'  , 4, 'street_address', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acsOpt, 'City'            , 5, 'city'          , NULL, 0, NULL, 5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acsOpt, 'State/Province'  , 6, 'state_province', NULL, 0, NULL, 6, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_acsOpt, 'Country'         , 7, 'country'       , NULL, 0, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_acsOpt, 'Quốc gia'         , 7, 'country'       , NULL, 0, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acsOpt, 'Postal Code'     , 8, 'postal_code'   , NULL, 0, NULL, 8, NULL, 0, 0, 1, NULL, NULL, NULL),
 
   (@option_group_id_acConRef, 'Email Address'   , 2, 'email'         , NULL, 0, NULL, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5174,7 +5110,7 @@ VALUES
   (@option_group_id_acConRef, 'Street Address'  , 4, 'street_address', NULL, 0, NULL, 4, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acConRef, 'City'            , 5, 'city'          , NULL, 0, NULL, 5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acConRef, 'State/Province'  , 6, 'state_province', NULL, 0, NULL, 6, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_acConRef, 'Country'         , 7, 'country'       , NULL, 0, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_acConRef, 'Quốc gia'         , 7, 'country'       , NULL, 0, NULL, 7, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_acConRef, 'Postal Code'     , 8, 'country'       , NULL, 0, NULL, 8, NULL, 0, 0, 1, NULL, NULL, NULL),
 
   (@option_group_id_adOpt, 'Street Address'    ,  1, 'street_address', NULL, 0, NULL,  1, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5184,15 +5120,15 @@ VALUES
   (@option_group_id_adOpt, 'City'              ,  5, 'city'          , NULL, 0, NULL,  5, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Postal Code' ,  6, 'postal_code'   , NULL, 0, NULL,  6, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Postal Code Suffix',  7, 'postal_code_suffix', NULL, 0, NULL,  7, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_adOpt, 'County'            ,  8, 'county'        , NULL, 0, NULL,  8, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_adOpt, 'Quận'            ,  8, 'county'        , NULL, 0, NULL,  8, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'State/Province'  ,  9, 'state_province', NULL, 0, NULL,  9, NULL, 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_adOpt, 'Country'           , 10, 'country'       , NULL, 0, NULL, 10, NULL, 0, 0, 1, NULL, NULL, NULL),
+  (@option_group_id_adOpt, 'Quốc gia'           , 10, 'country'       , NULL, 0, NULL, 10, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Latitude'          , 11, 'geo_code_1'    , NULL, 0, NULL, 11, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Longitude'         , 12, 'geo_code_2', NULL, 0, NULL, 12, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Address Name'      , 13, 'address_name', NULL, 0, NULL, 13, NULL, 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_adOpt, 'Street Address Parsing', 14, 'street_address_parsing', NULL, 0, NULL, 14, NULL, 0, 0, 1, NULL, NULL, NULL),
 
-  (@option_group_id_gType, 'Access Control', 1, 'Access Control', NULL, 0, NULL, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
+  (@option_group_id_gType, 'Điều khiển Truy nhập', 1, 'Access Control', NULL, 0, NULL, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_gType, 'Mailing List',   2, 'Mailing List',   NULL, 0, NULL, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
 
   (@option_group_id_grantSt, 'Submitted', 1, 'Submitted',  NULL, 0, 1,    1, NULL, 0, 0, 1, NULL, NULL, NULL),
@@ -5205,7 +5141,6 @@ VALUES
 
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Sample'               , 1, 'CRM_Contact_Form_Search_Custom_Sample'      , NULL, 0, NULL, 1, 'Household Name and State', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_ContributionAggregate', 2, 'CRM_Contact_Form_Search_Custom_ContributionAggregate', NULL, 0, NULL, 2, 'Contribution Aggregate', 0, 0, 1, NULL, NULL, NULL),
-  (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Basic'                , 3, 'CRM_Contact_Form_Search_Custom_Basic'       , NULL, 0, NULL, 3, 'Basic Search', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Group'                , 4, 'CRM_Contact_Form_Search_Custom_Group'       , NULL, 0, NULL, 4, 'Include / Exclude Search', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_PostalMailing'        , 5, 'CRM_Contact_Form_Search_Custom_PostalMailing', NULL, 0, NULL, 5, 'Postal Mailing', 0, 0, 1, NULL, NULL, NULL),
   (@option_group_id_csearch , 'CRM_Contact_Form_Search_Custom_Proximity'            , 6, 'CRM_Contact_Form_Search_Custom_Proximity', NULL, 0, NULL, 6, 'Proximity Search', 0, 0, 1, NULL, NULL, NULL),
@@ -5307,7 +5242,7 @@ VALUES
   (@option_group_id_we, 'Textarea', 1, 'Textarea', NULL, 0, NULL, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_we, 'CKEditor', 2, 'CKEditor', NULL, 0, NULL, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
 
-  (@option_group_id_mt, 'Search Builder',      1, 'Search Builder',      NULL, 0, 0,    1, NULL, 0, 1, 1, NULL, NULL, NULL),
+  (@option_group_id_mt, 'Lập tìm kiếm',      1, 'Search Builder',      NULL, 0, 0,    1, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_mt, 'Import Contact',      2, 'Import Contact',      NULL, 0, 0,    2, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_mt, 'Import Activity',     3, 'Import Activity',     NULL, 0, 0,    3, NULL, 0, 1, 1, NULL, NULL, NULL),
   (@option_group_id_mt, 'Import Contribution', 4, 'Import Contribution', NULL, 0, 0,    4, NULL, 0, 1, 1, NULL, NULL, NULL),
@@ -5583,7 +5518,7 @@ VALUES
   (@option_group_id_communication_style, 'Familiar', 2, 'familiar', NULL, 0, 0, 2, NULL, 0, 0, 1, NULL, NULL, NULL),
 
 -- Message Mode
-(@option_group_id_msg_mode, 'Email', 'Email', 'Email', NULL, 0, 1, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
+(@option_group_id_msg_mode, 'Thư điện tử', 'Email', 'Email', NULL, 0, 1, 1, NULL, 0, 1, 1, NULL, NULL, NULL),
 (@option_group_id_msg_mode, 'SMS', 'SMS', 'SMS', NULL, 0, 0, 2, NULL, 0, 1, 1, NULL, NULL, NULL),
 (@option_group_id_msg_mode, 'User Preference', 'User_Preference', 'User Preference', NULL, 0, 0, 3, NULL, 0, 1, 1, NULL, NULL, NULL),
 
@@ -5966,7 +5901,7 @@ INSERT INTO
 VALUES
     (@option_group_id_medium, 'In Person',  1, 'in_person', NULL, 0,  0, 1, NULL, 0, 1, 1),
     (@option_group_id_medium, 'Phone',  2, 'phone', NULL, 0,  1, 2, NULL, 0, 1, 1),
-    (@option_group_id_medium, 'Email',  3, 'email', NULL, 0,  0, 3, NULL, 0, 1, 1),
+    (@option_group_id_medium, 'Thư điện tử',  3, 'email', NULL, 0,  0, 3, NULL, 0, 1, 1),
     (@option_group_id_medium, 'Fax',  4, 'fax', NULL, 0,  0, 4, NULL, 0, 1, 1),
     (@option_group_id_medium, 'Letter Mail',  5, 'letter_mail', NULL, 0,  0, 5, NULL, 0, 1, 1);
 
@@ -6004,13 +5939,13 @@ INSERT INTO `civicrm_payment_processor_type`
  (name, title, description, is_active, is_default, user_name_label, password_label, signature_label, subject_label, class_name, url_site_default, url_api_default, url_recur_default, url_button_default, url_site_test_default, url_api_test_default, url_recur_test_default, url_button_test_default, billing_mode, is_recur )
 VALUES
  ('PayPal_Standard',    'PayPal - Website Payments Standard', NULL,1,0,'Merchant Account Email',NULL,NULL,NULL,'Payment_PayPalImpl','https://www.paypal.com/',NULL,'https://www.paypal.com/',NULL,'https://www.sandbox.paypal.com/',NULL,'https://www.sandbox.paypal.com/',NULL,4,1),
- ('PayPal',             'PayPal - Website Payments Pro',      NULL,1,0,'User Name','Password','Signature',NULL,'Payment_PayPalImpl','https://www.paypal.com/','https://api-3t.paypal.com/','https://www.paypal.com/','https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif','https://www.sandbox.paypal.com/','https://api-3t.sandbox.paypal.com/','https://www.sandbox.paypal.com/','https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif',3, 1),
- ('PayPal_Express',     'PayPal - Express',       NULL,1,0,'User Name','Password','Signature',NULL,'Payment_PayPalImpl','https://www.paypal.com/','https://api-3t.paypal.com/',NULL,'https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif','https://www.sandbox.paypal.com/','https://api-3t.sandbox.paypal.com/',NULL,'https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif',2, 1),
+ ('PayPal',             'PayPal - Website Payments Pro',      NULL,1,0,'Tên người dùng','Mật khẩu','Chữ ký',NULL,'Payment_PayPalImpl','https://www.paypal.com/','https://api-3t.paypal.com/','https://www.paypal.com/','https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif','https://www.sandbox.paypal.com/','https://api-3t.sandbox.paypal.com/','https://www.sandbox.paypal.com/','https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif',3, 1),
+ ('PayPal_Express',     'PayPal - Express',       NULL,1,0,'Tên người dùng','Mật khẩu','Chữ ký',NULL,'Payment_PayPalImpl','https://www.paypal.com/','https://api-3t.paypal.com/',NULL,'https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif','https://www.sandbox.paypal.com/','https://api-3t.sandbox.paypal.com/',NULL,'https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif',2, 1),
  ('AuthNet',            'Authorize.Net',          NULL,1,0,'API Login','Payment Key','MD5 Hash',NULL,'Payment_AuthorizeNet','https://secure2.authorize.net/gateway/transact.dll',NULL,'https://api2.authorize.net/xml/v1/request.api',NULL,'https://test.authorize.net/gateway/transact.dll',NULL,'https://apitest.authorize.net/xml/v1/request.api',NULL,1,1),
  ('PayJunction',        'PayJunction',            NULL,1,0,'User Name','Password',NULL,NULL,'Payment_PayJunction','https://payjunction.com/quick_link',NULL,NULL,NULL,'https://www.payjunctionlabs.com/quick_link',NULL,NULL,NULL,1,1),
  ('eWAY',               'eWAY (Single Currency)', NULL,1,0,'Customer ID',NULL,NULL,NULL,'Payment_eWAY','https://www.eway.com.au/gateway_cvn/xmlpayment.asp',NULL,NULL,NULL,'https://www.eway.com.au/gateway_cvn/xmltest/testpage.asp',NULL,NULL,NULL,1,0),
  ('Payment_Express',    'DPS Payment Express',    NULL,1,0,'User ID','Key','Mac Key - pxaccess only',NULL,'Payment_PaymentExpress','https://www.paymentexpress.com/pleaseenteraurl',NULL,NULL,NULL,'https://www.paymentexpress.com/pleaseenteratesturl',NULL,NULL,NULL,4,0),
- ('Dummy',              'Dummy Payment Processor',NULL,1,1,'User Name',NULL,NULL,NULL,'Payment_Dummy',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,1),
+ ('Dummy',              'Dummy Payment Processor',NULL,1,1,'Tên người dùng',NULL,NULL,NULL,'Payment_Dummy',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,1),
  ('Elavon',             'Elavon Payment Processor','Elavon / Nova Virtual Merchant',1,0,'SSL Merchant ID ','SSL User ID','SSL PIN',NULL,'Payment_Elavon','https://www.myvirtualmerchant.com/VirtualMerchant/processxml.do',NULL,NULL,NULL,'https://www.myvirtualmerchant.com/VirtualMerchant/processxml.do',NULL,NULL,NULL,1,0),
  ('Realex',             'Realex Payment',         NULL,1,0,'Merchant ID', 'Password', NULL, 'Account', 'Payment_Realex', 'https://epage.payandshop.com/epage.cgi', NULL, NULL, NULL, 'https://epage.payandshop.com/epage-remote.cgi', NULL, NULL, NULL, 1, 0),
  ('PayflowPro',         'PayflowPro',             NULL,1,0,'Vendor ID', 'Password', 'Partner (merchant)', 'User', 'Payment_PayflowPro', 'https://Payflowpro.paypal.com', NULL, NULL, NULL, 'https://pilot-Payflowpro.paypal.com', NULL, NULL, NULL, 1, 0),
@@ -6360,8 +6295,8 @@ INSERT INTO civicrm_uf_group
     (id, name,                 group_type,           title,                                      is_cms_user, is_reserved, help_post) VALUES
     (1,  'name_and_address',   'Individual,Contact',  'Name and Address',   0,           0,           NULL),
     (2,  'supporter_profile',  'Individual,Contact',  'Supporter Profile',  2,           0,           '<p><strong>The information you provide will NOT be shared with any third party organisations.</strong></p><p>Thank you for getting involved in our campaign!</p>'),
-    (3,  'participant_status', 'Participant',         'Participant Status',             0,      1,           NULL),
-    (4,  'new_individual',     'Individual,Contact',  'New Individual'    ,             0,      1,           NULL),
+    (3,  'participant_status', 'Participant',         'Tình trạng Người tham gia',             0,      1,           NULL),
+    (4,  'new_individual',     'Individual,Contact',  'Individual mới'    ,             0,      1,           NULL),
     (5,  'new_organization',   'Organization,Contact','New Organization'  ,             0,      1,           NULL),
     (6,  'new_household',      'Household,Contact',   'New Household'     ,             0,      1,           NULL),
     (7,  'summary_overlay',    'Contact',             'Summary Overlay'   ,             0,      1,           NULL),
@@ -6384,64 +6319,64 @@ VALUES
 
 INSERT INTO civicrm_uf_field
        ( uf_group_id, field_name,              is_required, is_reserved, weight, visibility,                  in_selector, is_searchable, location_type_id, label,                                          field_type,    help_post, phone_type_id ) VALUES
-       (  1,           'first_name',            1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'First Name',               'Individual',   NULL,  NULL),
-       (  1,           'last_name',             1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Last Name',                'Individual',   NULL,  NULL),
+       (  1,           'first_name',            1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'Họ',               'Individual',   NULL,  NULL),
+       (  1,           'last_name',             1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Tên',                'Individual',   NULL,  NULL),
        (  1,           'street_address',        0,           0,           3,      'User and User Admin Only',  0,           0,             1,             'Street Address (Home)',    'Contact',      NULL,  NULL),
        (  1,           'city',                  0,           0,           4,      'User and User Admin Only',  0,           0,             1,             'City (Home)',              'Contact',      NULL,  NULL),
        (  1,           'postal_code',           0,           0,           5,      'User and User Admin Only',  0,           0,             1,             'Postal Code (Home)',       'Contact',      NULL,  NULL),
        (  1,           'country',               0,           0,           6,      'User and User Admin Only',  0,           0,             1,             'Country (Home)',           'Contact',      NULL,  NULL),
        (  1,           'state_province',        0,           0,           7,      'User and User Admin Only',  0,           0,             1,             'State (Home)',             'Contact',      NULL,  NULL),
-       (  2,           'first_name',            1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'First Name',               'Individual',   NULL,  NULL),
-       (  2,           'last_name',             1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Last Name',                'Individual',   NULL,  NULL),
+       (  2,           'first_name',            1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'Họ',               'Individual',   NULL,  NULL),
+       (  2,           'last_name',             1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Tên',                'Individual',   NULL,  NULL),
        (  2,           'email',                 1,           0,           3,      'User and User Admin Only',  0,           0,             NULL,          'Email Address',            'Contact',      NULL,  NULL),
-       (  3,           'participant_status',    1,           1,           1,      'User and User Admin Only',  0,           0,             NULL,          'Participant Status',       'Participant',  NULL,  NULL),
-       (  4,           'first_name',            1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'First Name',               'Individual',   NULL,  NULL),
-       (  4,           'last_name',             1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Last Name',                'Individual',   NULL,  NULL),
+       (  3,           'participant_status',    1,           1,           1,      'User and User Admin Only',  0,           0,             NULL,          'Tình trạng Người tham gia',       'Participant',  NULL,  NULL),
+       (  4,           'first_name',            1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'Họ',               'Individual',   NULL,  NULL),
+       (  4,           'last_name',             1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Tên',                'Individual',   NULL,  NULL),
        (  4,           'email',                 0,           0,           3,      'User and User Admin Only',  0,           0,             NULL,          'Email Address',            'Contact',      NULL,  NULL),
-       (  5,           'organization_name',     1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Organization Name',        'Organization', NULL,  NULL),
+       (  5,           'organization_name',     1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Tên tổ chức',        'Organization', NULL,  NULL),
        (  5,           'email',                 0,           0,           3,      'User and User Admin Only',  0,           0,             NULL,          'Email Address',            'Contact',      NULL,  NULL),
-       (  6,           'household_name',        1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Household Name',           'Household',    NULL,  NULL),
+       (  6,           'household_name',        1,           0,           2,      'User and User Admin Only',  0,           0,             NULL,          'Tên hộ gia đình',           'Household',    NULL,  NULL),
        (  6,           'email',                 0,           0,           3,      'User and User Admin Only',  0,           0,             NULL,          'Email Address',            'Contact',      NULL,  NULL),
        (  7,           'phone',                 1,           0,           1,      'User and User Admin Only',  0,           0,             1,             'Home Phone',               'Contact',      NULL,  1 ),
        (  7,           'phone',                 1,           0,           2,      'User and User Admin Only',  0,           0,             1,             'Home Mobile',              'Contact',      NULL,  2 ),
        (  7,           'street_address',        1,           0,           3,      'User and User Admin Only',  0,           0,             NULL,          'Primary Address',          'Contact',      NULL,  NULL),
        (  7,           'city',                  1,           0,           4,      'User and User Admin Only',  0,           0,             NULL,          'City',                     'Contact',      NULL,  NULL),
-       (  7,           'state_province',        1,           0,           5,      'User and User Admin Only',  0,           0,             NULL,          'State',                    'Contact',      NULL,  NULL),
+       (  7,           'state_province',        1,           0,           5,      'User and User Admin Only',  0,           0,             NULL,          'Tỉnh',                    'Contact',      NULL,  NULL),
        (  7,           'postal_code',           1,           0,           6,      'User and User Admin Only',  0,           0,             NULL,          'Postal Code',              'Contact',      NULL,  NULL),
        (  7,           'email',                 1,           0,           7,      'User and User Admin Only',  0,           0,             NULL,          'Primary Email',            'Contact',      NULL,  NULL),
-       (  7,           'group',                 1,           0,           8,      'User and User Admin Only',  0,           0,             NULL,          'Groups',                   'Contact',      NULL,  NULL),
+       (  7,           'group',                 1,           0,           8,      'User and User Admin Only',  0,           0,             NULL,          'Các nhóm',                   'Contact',      NULL,  NULL),
        (  7,           'tag',                   1,           0,           9,      'User and User Admin Only',  0,           0,             NULL,          'Tags',                     'Contact',      NULL,  NULL),
-       (  7,           'gender_id',             1,           0,           10,     'User and User Admin Only',  0,           0,             NULL,          'Gender',                   'Individual',   NULL,  NULL),
+       (  7,           'gender_id',             1,           0,           10,     'User and User Admin Only',  0,           0,             NULL,          'Giới tính',                   'Individual',   NULL,  NULL),
        (  7,           'birth_date',            1,           0,           11,     'User and User Admin Only',  0,           0,             NULL,          'Date of Birth',            'Individual',   NULL,  NULL),
        (  8,           'street_address',        1,           1,           1,      'User and User Admin Only',  0,           0,             1,             'Street Address (Home)',    'Contact',      NULL,  NULL),
        (  8,           'city',                  1,           1,           2,      'User and User Admin Only',  0,           0,             1,             'City (Home)',              'Contact',      NULL,  NULL),
        (  8,           'postal_code',           0,           0,           3,      'User and User Admin Only',  0,           0,             1,             'Postal Code (Home)',       'Contact',      NULL,  NULL),
        (  8,           'country',               0,           0,           4,      'User and User Admin Only',  0,           0,             1,             'Country (Home)',           'Contact',      NULL,  NULL),
        (  8,           'state_province',        0,           0,           5,      'User and User Admin Only',  0,           0,             1,             'State (Home)',             'Contact',      NULL,  NULL),
-       (  9,           'organization_name',     1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'Organization Name',        'Organization', NULL,  NULL),
+       (  9,           'organization_name',     1,           0,           1,      'User and User Admin Only',  0,           0,             NULL,          'Tên tổ chức',        'Organization', NULL,  NULL),
        (  9,           'phone',                 1,           0,           2,      'User and User Admin Only',  0,           0,             3,             'Phone (Main) ',            'Contact',      NULL,   1),
        (  9,           'email',                 1,           0,           3,      'User and User Admin Only',  0,           0,             3,             'Email (Main) ',            'Contact',      NULL,   NULL),
        (  9,           'street_address',        1,           0,           4,      'User and User Admin Only',  0,           0,             3,             'Street Address',           'Contact',      NULL,   NULL),
        (  9,           'city',                  1,           0,           5,      'User and User Admin Only',  0,           0,             3,             'City',                     'Contact',      NULL,   NULL),
        (  9,           'postal_code',           1,           0,           6,      'User and User Admin Only',  0,           0,             3,             'Postal Code',              'Contact',      NULL,   NULL),
-       (  9,           'country',               1,           0,           7,      'User and User Admin Only',  0,           0,             3,             'Country',                  'Contact',      NULL,   NULL),
+       (  9,           'country',               1,           0,           7,      'User and User Admin Only',  0,           0,             3,             'Quốc gia',                  'Contact',      NULL,   NULL),
        (  9,           'state_province',        1,           0,           8,      'User and User Admin Only',  0,           0,             3,             'State/Province',         'Contact',      NULL,   NULL),
        ( 10,     'financial_type',              0, 1, 1, 'User and User Admin Only', 0, 0, NULL, 'Financial Type', 'Contribution', NULL, NULL ),
        ( 10,     'total_amount',                0, 1, 2, 'User and User Admin Only', 0, 0, NULL, 'Amount', 'Contribution', NULL, NULL ),
-       ( 10,     'contribution_status_id',      1, 1, 3, 'User and User Admin Only', 0, 0, NULL, 'Status', 'Contribution', NULL, NULL ),
+       ( 10,     'contribution_status_id',      1, 1, 3, 'User and User Admin Only', 0, 0, NULL, 'Tình trạng', 'Contribution', NULL, NULL ),
        ( 10,     'receive_date',                1, 1, 4, 'User and User Admin Only', 0, 0, NULL, 'Received', 'Contribution', NULL, NULL ),
-       ( 10,     'contribution_source',         0, 0, 5, 'User and User Admin Only', 0, 0, NULL, 'Source', 'Contribution', NULL, NULL ),
+       ( 10,     'contribution_source',         0, 0, 5, 'User and User Admin Only', 0, 0, NULL, 'Nguồn', 'Contribution', NULL, NULL ),
        ( 10,     'payment_instrument',          0, 0, 6, 'User and User Admin Only', 0, 0, NULL, 'Payment Method', 'Contribution', NULL, NULL ),
        ( 10,     'contribution_check_number',                0, 0, 7, 'User and User Admin Only', 0, 0, NULL, 'Check Number', 'Contribution', NULL, NULL ),
        ( 10,     'send_receipt',                0, 0, 8, 'User and User Admin Only', 0, 0, NULL, 'Send Receipt', 'Contribution', NULL, NULL ),
-       ( 10,     'invoice_id',                  0, 0, 9, 'User and User Admin Only', 0, 0, NULL, 'Invoice ID', 'Contribution', NULL, NULL ),
+       ( 10,     'invoice_id',                  0, 0, 9, 'User and User Admin Only', 0, 0, NULL, 'Số hóa đơn', 'Contribution', NULL, NULL ),
        ( 10,     'soft_credit',                 0, 0, 10, 'User and User Admin Only', 0, 0, NULL, 'Soft Credit', 'Contribution', NULL, NULL ),
        ( 10,     'soft_credit_type',            0, 0, 11, 'User and User Admin Only', 0, 0, NULL, 'Soft Credit Type', 'Contribution', NULL, NULL ),
-       ( 11,     'membership_type',             1, 1, 1, 'User and User Admin Only', 0, 0, NULL, 'Membership Type', 'Membership', NULL, NULL ),
+       ( 11,     'membership_type',             1, 1, 1, 'User and User Admin Only', 0, 0, NULL, 'Kiểu hội viên', 'Membership', NULL, NULL ),
        ( 11,     'membership_join_date',        1, 1, 2, 'User and User Admin Only', 0, 0, NULL, 'Member Since', 'Membership', NULL, NULL ),
        ( 11,     'membership_start_date',       0, 1, 3, 'User and User Admin Only', 0, 0, NULL, 'Start Date', 'Membership', NULL, NULL ),
        ( 11,     'membership_end_date',         0, 1, 4, 'User and User Admin Only', 0, 0, NULL, 'End Date', 'Membership', NULL, NULL ),
-       ( 11,     'membership_source',           0, 0, 5, 'User and User Admin Only', 0, 0, NULL, 'Source', 'Membership', NULL, NULL ),
+       ( 11,     'membership_source',           0, 0, 5, 'User and User Admin Only', 0, 0, NULL, 'Nguồn', 'Membership', NULL, NULL ),
        ( 11,     'send_receipt',                0, 0, 6, 'User and User Admin Only', 0, 0, NULL, 'Send Receipt', 'Membership', NULL, NULL ),
        ( 11,     'financial_type',              0, 1, 7, 'User and User Admin Only', 0, 0, NULL, 'Financial Type', 'Membership', NULL, NULL ),
        ( 11,     'total_amount',                0, 1, 8, 'User and User Admin Only', 0, 0, NULL, 'Amount', 'Membership', NULL, NULL ),
@@ -6451,12 +6386,12 @@ INSERT INTO civicrm_uf_field
        ( 11,     'contribution_status_id',      1, 1, 12, 'User and User Admin Only', 0, 0, NULL, 'Payment Status', 'Membership', NULL, NULL ),
        ( 11,     'soft_credit',                 0, 0, 13, 'User and User Admin Only', 0, 0, NULL, 'Soft Credit', 'Membership', NULL, NULL ),
        ( 11,     'soft_credit_type',            0, 0, 14, 'User and User Admin Only', 0, 0, NULL, 'Soft Credit Type', 'Membership', NULL, NULL ),
-       ( 12,     'first_name',                  1, 0,  1, 'User and User Admin Only', 0, 0, NULL, 'First Name',  'Individual', NULL, NULL),
-       ( 12,     'last_name',                   1, 0,  2, 'User and User Admin Only', 0, 0, NULL, 'Last Name',   'Individual',  NULL,  NULL),
+       ( 12,     'first_name',                  1, 0,  1, 'User and User Admin Only', 0, 0, NULL, 'Họ',  'Individual', NULL, NULL),
+       ( 12,     'last_name',                   1, 0,  2, 'User and User Admin Only', 0, 0, NULL, 'Tên',   'Individual',  NULL,  NULL),
        ( 12,     'email',                       1, 0,  3, 'User and User Admin Only', 0, 0, NULL, 'Email Address', 'Contact', NULL, NULL),
-       ( 13,     'prefix_id',                   0, 1,  1, 'User and User Admin Only', 0, 0, NULL, 'Individual Prefix', 'Individual', NULL, NULL),
-       ( 13,     'first_name',                  1, 1,  2, 'User and User Admin Only', 0, 0, NULL, 'First Name',        'Individual', NULL, NULL),
-       ( 13,     'last_name',                   1, 1,  3, 'User and User Admin Only', 0, 0, NULL, 'Last Name',         'Individual', NULL, NULL),
+       ( 13,     'prefix_id',                   0, 1,  1, 'User and User Admin Only', 0, 0, NULL, 'Tiền tố Cá nhân', 'Individual', NULL, NULL),
+       ( 13,     'first_name',                  1, 1,  2, 'User and User Admin Only', 0, 0, NULL, 'Họ',        'Individual', NULL, NULL),
+       ( 13,     'last_name',                   1, 1,  3, 'User and User Admin Only', 0, 0, NULL, 'Tên',         'Individual', NULL, NULL),
        ( 13,     'email',                       0, 1,  4, 'User and User Admin Only', 0, 0, 1,    'Email Address',     'Contact', NULL, NULL);
 
 
@@ -6493,32 +6428,16 @@ VALUES
 INSERT INTO `civicrm_contact_type`
   (`id`, `name`, `label`,`image_URL`, `parent_id`, `is_active`,`is_reserved`)
  VALUES
-  ( 1, 'Individual'  , 'Individual'  , NULL, NULL, 1, 1),
-  ( 2, 'Household'   , 'Household'   , NULL, NULL, 1, 1),
-  ( 3, 'Organization', 'Organization', NULL, NULL, 1, 1);
+  ( 1, 'Individual'  , 'Cá nhân'  , NULL, NULL, 1, 1),
+  ( 2, 'Household'   , 'Hộ gia đình'   , NULL, NULL, 1, 1),
+  ( 3, 'Organization', 'Tổ chức', NULL, NULL, 1, 1);
 
 -- +--------------------------------------------------------------------+
--- | CiviCRM version 5                                                  |
--- +--------------------------------------------------------------------+
--- | Copyright CiviCRM LLC (c) 2004-2019                                |
--- +--------------------------------------------------------------------+
--- | This file is a part of CiviCRM.                                    |
+-- | Copyright CiviCRM LLC. All rights reserved.                        |
 -- |                                                                    |
--- | CiviCRM is free software; you can copy, modify, and distribute it  |
--- | under the terms of the GNU Affero General Public License           |
--- | Version 3, 19 November 2007 and the CiviCRM Licensing Exception.   |
--- |                                                                    |
--- | CiviCRM is distributed in the hope that it will be useful, but     |
--- | WITHOUT ANY WARRANTY; without even the implied warranty of         |
--- | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.               |
--- | See the GNU Affero General Public License for more details.        |
--- |                                                                    |
--- | You should have received a copy of the GNU Affero General Public   |
--- | License and the CiviCRM Licensing Exception along                  |
--- | with this program; if not, contact CiviCRM LLC                     |
--- | at info[AT]civicrm[DOT]org. If you have questions about the        |
--- | GNU Affero General Public License or the licensing of CiviCRM,     |
--- | see the CiviCRM license FAQ at http://civicrm.org/licensing        |
+-- | This work is published under the GNU AGPLv3 license with some      |
+-- | permitted exceptions and without any warranty. For full license    |
+-- | and copyright information, see https://civicrm.org/licensing       |
 -- +--------------------------------------------------------------------+
 --
 -- Generated from civicrm_msg_template.tpl
@@ -19568,7 +19487,7 @@ or want to inquire about reinstating your registration for this event.{/ts}</p>
           {$email}
         </td>
       </tr>
-    {elseif $email}}
+    {elseif $email}
       <tr>
         <th {$headerStyle}>
           {ts}Registered Email{/ts}
@@ -20364,7 +20283,7 @@ or want to inquire about reinstating your registration for this event.{/ts}</p>
           {$email}
         </td>
       </tr>
-    {elseif $email}}
+    {elseif $email}
       <tr>
         <th {$headerStyle}>
           {ts}Registered Email{/ts}
@@ -23196,7 +23115,7 @@ VALUES
   (@option_group_id_soft_credit_type   , 'In Honor of', 1, 'in_honor_of', 1, 0, 1, 1),
   (@option_group_id_soft_credit_type   , 'In Memory of', 2, 'in_memory_of', 2, 0, 1, 1),
   (@option_group_id_soft_credit_type   , 'Solicited', 3, 'solicited', 3, 1, 1, 1),
-  (@option_group_id_soft_credit_type   , 'Household', 4, 'household', 4, 0, 1, 0),
+  (@option_group_id_soft_credit_type   , 'Hộ gia đình', 4, 'household', 4, 0, 1, 0),
   (@option_group_id_soft_credit_type   , 'Workplace Giving', 5, 'workplace', 5, 0, 1, 0),
   (@option_group_id_soft_credit_type   , 'Foundation Affiliate', 6, 'foundation_affiliate', 6, 0, 1, 0),
   (@option_group_id_soft_credit_type   , '3rd-party Service', 7, '3rd-party_service', 7, 0, 1, 0),
@@ -23205,27 +23124,11 @@ VALUES
   (@option_group_id_soft_credit_type   , 'Personal Campaign Page', 10, 'pcp', 10, 0, 1, 1),
   (@option_group_id_soft_credit_type   , 'Gift', 11, 'gift', 11, 0, 1, 1);
 -- +--------------------------------------------------------------------+
--- | CiviCRM version 5                                                  |
--- +--------------------------------------------------------------------+
--- | Copyright CiviCRM LLC (c) 2004-2019                                |
--- +--------------------------------------------------------------------+
--- | This file is a part of CiviCRM.                                    |
+-- | Copyright CiviCRM LLC. All rights reserved.                        |
 -- |                                                                    |
--- | CiviCRM is free software; you can copy, modify, and distribute it  |
--- | under the terms of the GNU Affero General Public License           |
--- | Version 3, 19 November 2007 and the CiviCRM Licensing Exception.   |
--- |                                                                    |
--- | CiviCRM is distributed in the hope that it will be useful, but     |
--- | WITHOUT ANY WARRANTY; without even the implied warranty of         |
--- | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.               |
--- | See the GNU Affero General Public License for more details.        |
--- |                                                                    |
--- | You should have received a copy of the GNU Affero General Public   |
--- | License and the CiviCRM Licensing Exception along                  |
--- | with this program; if not, contact CiviCRM LLC                     |
--- | at info[AT]civicrm[DOT]org. If you have questions about the        |
--- | GNU Affero General Public License or the licensing of CiviCRM,     |
--- | see the CiviCRM license FAQ at http://civicrm.org/licensing        |
+-- | This work is published under the GNU AGPLv3 license with some      |
+-- | permitted exceptions and without any warranty. For full license    |
+-- | and copyright information, see https://civicrm.org/licensing       |
 -- +--------------------------------------------------------------------+
 -- Navigation Menu, Preferences and Mail Settings
 --
@@ -23248,7 +23151,7 @@ INSERT INTO `civicrm_dashboard`
     ( @domainID, 'blog', 'CiviCRM News', 'civicrm/dashlet/blog?reset=1', 'access CiviCRM', NULL, 1, 'civicrm/dashlet/blog?reset=1&context=dashletFullscreen', 1, 1440),
     ( @domainID, 'getting-started', 'CiviCRM Resources', 'civicrm/dashlet/getting-started?reset=1', 'access CiviCRM', NULL, 1, 'civicrm/dashlet/getting-started?reset=1&context=dashletFullscreen', 1, 7200),
 
-    ( @domainID, 'activity', 'Activities', 'civicrm/dashlet/activity?reset=1', 'access CiviCRM', NULL, 1, 'civicrm/dashlet/activity?reset=1&context=dashletFullscreen', 1, 7200),
+    ( @domainID, 'activity', 'Hoạt động', 'civicrm/dashlet/activity?reset=1', 'access CiviCRM', NULL, 1, 'civicrm/dashlet/activity?reset=1&context=dashletFullscreen', 1, 7200),
     ( @domainID, 'myCases', 'My Cases', 'civicrm/dashlet/myCases?reset=1', 'access my cases and activities', NULL, 1, 'civicrm/dashlet/myCases?reset=1&context=dashletFullscreen', 1, 60),
     ( @domainID, 'allCases', 'All Cases', 'civicrm/dashlet/allCases?reset=1', 'access all cases and activities', NULL, 1, 'civicrm/dashlet/allCases?reset=1&context=dashletFullscreen', 1, 60),
     ( @domainID, 'casedashboard', 'Case Dashboard Dashlet', 'civicrm/dashlet/casedashboard?reset=1', 'access my cases and activities,access all cases and activities', 'OR', 1, 'civicrm/dashlet/casedashboard?reset=1&context=dashletFullscreen', 1, 60);
@@ -23888,7 +23791,7 @@ VALUES
 INSERT INTO `civicrm_report_instance`
     ( `domain_id`, `title`, `report_id`, `description`, `permission`, `form_values`)
 VALUES
-    ( @domainID, 'LYBUNT (last year but not this year)', 'contribute/lybunt', 'Last year but not this year. Provides a list of constituents who donated last year but did not donate during the time period you specify as the current year.', 'access CiviContribute', 'a:19:{s:6:"fields";a:3:{s:9:"sort_name";s:1:"1";s:5:"email";s:1:"1";s:5:"phone";s:1:"1";}s:12:"sort_name_op";s:3:"has";s:15:"sort_name_value";s:0:"";s:6:"yid_op";s:2:"eq";s:9:"yid_value";s:4:"2011";s:25:"contribution_status_id_op";s:2:"in";s:28:"contribution_status_id_value";a:1:{i:0;s:1:"1";}s:6:"gid_op";s:2:"in";s:9:"gid_value";a:0:{}s:8:"tagid_op";s:2:"in";s:11:"tagid_value";a:0:{}s:11:"description";s:157:"Last year but not this year. Provides a list of constituents who donated last year but did not donate during the time period you specify as the current year.";s:13:"email_subject";s:0:"";s:8:"email_to";s:0:"";s:8:"email_cc";s:0:"";s:10:"permission";s:21:"access CiviContribute";s:6:"groups";s:0:"";s:6:"charts";s:0:"";s:9:"domain_id";i:1;}');
+    ( @domainID, 'LYBUNT (last year but not this year)', 'contribute/lybunt', 'Last year but not this year. Provides a list of constituents who donated last year but did not donate during the time period you specify as the current year.', 'access CiviContribute', 'a:19:{s:6:"fields";a:5:{s:9:"sort_name";s:1:"1";s:5:"email";s:1:"1";s:5:"phone";s:1:"1";s:22:"last_year_total_amount";s:1:"1";s:23:"civicrm_life_time_total";s:1:"1";}s:12:"sort_name_op";s:3:"has";s:15:"sort_name_value";s:0:"";s:6:"yid_op";s:2:"eq";s:9:"yid_value";s:4:"2011";s:25:"contribution_status_id_op";s:2:"in";s:28:"contribution_status_id_value";a:1:{i:0;s:1:"1";}s:6:"gid_op";s:2:"in";s:9:"gid_value";a:0:{}s:8:"tagid_op";s:2:"in";s:11:"tagid_value";a:0:{}s:11:"description";s:157:"Last year but not this year. Provides a list of constituents who donated last year but did not donate during the time period you specify as the current year.";s:13:"email_subject";s:0:"";s:8:"email_to";s:0:"";s:8:"email_cc";s:0:"";s:10:"permission";s:21:"access CiviContribute";s:6:"groups";s:0:"";s:6:"charts";s:0:"";s:9:"domain_id";i:1;}');
 
 INSERT INTO `civicrm_report_instance`
     ( `domain_id`, `title`, `report_id`, `description`, `permission`, `form_values`)
@@ -24024,4 +23927,4 @@ INSERT INTO `civicrm_report_instance`
     ( `domain_id`, `title`, `report_id`, `description`, `permission`, `form_values`)
 VALUES
     (  @domainID, 'Survey Details', 'survey/detail', 'Detailed report for canvassing, phone-banking, walk lists or other surveys.', 'access CiviReport', 'a:39:{s:6:"fields";a:2:{s:9:"sort_name";s:1:"1";s:6:"result";s:1:"1";}s:22:"assignee_contact_id_op";s:2:"eq";s:25:"assignee_contact_id_value";s:0:"";s:12:"sort_name_op";s:3:"has";s:15:"sort_name_value";s:0:"";s:17:"street_number_min";s:0:"";s:17:"street_number_max";s:0:"";s:16:"street_number_op";s:3:"lte";s:19:"street_number_value";s:0:"";s:14:"street_name_op";s:3:"has";s:17:"street_name_value";s:0:"";s:15:"postal_code_min";s:0:"";s:15:"postal_code_max";s:0:"";s:14:"postal_code_op";s:3:"lte";s:17:"postal_code_value";s:0:"";s:7:"city_op";s:3:"has";s:10:"city_value";s:0:"";s:20:"state_province_id_op";s:2:"in";s:23:"state_province_id_value";a:0:{}s:13:"country_id_op";s:2:"in";s:16:"country_id_value";a:0:{}s:12:"survey_id_op";s:2:"in";s:15:"survey_id_value";a:0:{}s:12:"status_id_op";s:2:"eq";s:15:"status_id_value";s:1:"1";s:11:"custom_1_op";s:2:"in";s:14:"custom_1_value";a:0:{}s:11:"custom_2_op";s:2:"in";s:14:"custom_2_value";a:0:{}s:17:"custom_3_relative";s:1:"0";s:13:"custom_3_from";s:0:"";s:11:"custom_3_to";s:0:"";s:11:"description";s:75:"Detailed report for canvassing, phone-banking, walk lists or other surveys.";s:13:"email_subject";s:0:"";s:8:"email_to";s:0:"";s:8:"email_cc";s:0:"";s:10:"permission";s:17:"access CiviReport";s:6:"groups";s:0:"";s:9:"domain_id";i:1;}');
-UPDATE civicrm_domain SET version = '5.20.2';
+UPDATE civicrm_domain SET version = '5.21.2';
